@@ -38,7 +38,7 @@ const Main = () => {
             padding: 1.5,
             paddingTop: 0,
             color: "white",
-            fontWeight: 300,
+            fontWeight: 400,
             textAlign: "end",
           }}
         >
@@ -66,12 +66,12 @@ const Main = () => {
           opacity: 0.8,
           border: "3px solid white",
           ":hover": {
-            backgroundColor: "white",
-            color: "black",
+            backgroundColor: "bisque",
+            color: "darkslategray",
           },
         }}
       >
-        Learn More
+        Get Started
       </Button>
     </Box>
   );

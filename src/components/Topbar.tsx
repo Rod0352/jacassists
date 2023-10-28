@@ -16,6 +16,7 @@ function TopBar() {
         justifyContent: "space-between",
         alignItems: "center",
         padding: 1.5,
+        boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
       }}
     >
       {/* <Typography
@@ -43,11 +44,12 @@ function TopBar() {
           sx={{
             color: "black",
             marginRight: 1.5,
-            fontWeight: 300,
+            fontWeight: 500,
             transition: "all 0.2s ease",
             display: "flex",
             ":hover": {
               borderBottom: "1px solid white",
+
               //   color: yellow[500],
             },
           }}
@@ -58,7 +60,7 @@ function TopBar() {
           sx={{
             color: "black",
             marginRight: 1.5,
-            fontWeight: 300,
+            fontWeight: 500,
             transition: "all 0.2s ease",
             display: "flex",
             ":hover": {
@@ -72,7 +74,7 @@ function TopBar() {
         <Typography
           sx={{
             color: "black",
-            fontWeight: 300,
+            fontWeight: 500,
             transition: "all 0.2s ease",
             display: "flex",
             ":hover": {
