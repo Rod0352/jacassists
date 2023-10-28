@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.15",
+    "@mui/material": "^5.14.15",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,6 +14,7 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
+    "cli": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -17,27 +22,49 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --open --mode development --hot",
+    "build": "webpack --mode production"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.170",
+    "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/webpack-env": "^1.16.3",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "@typescript-eslint/typescript-estree": "^5.17.0",
+    "babel-loader": "^8.2.4",
+    "babel-polyfill": "^6.26.0",
+    "compression-webpack-plugin": "^9.2.0",
+    "css-loader": "^6.7.1",
+    "dotenv-webpack": "^7.1.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "file-loader": "^6.2.0",
+    "filemanager-webpack-plugin": "^8.0.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "html-webpack-plugin": "^5.5.0",
+    "nodeman": "^1.1.2",
+    "npm": "^9.1.3",
+    "npm-run-all": "^4.1.5",
+    "open-cli": "^7.0.1",
+    "path": "^0.12.7",
+    "prettier": "^1.18.2",
+    "react-router-dom": "^6.14.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.3",
+    "typescript": "^4.6.3",
+    "webpack": "^5.75.0",
+    "webpack-bundle-analyzer": "^4.7.0",
+    "webpack-bundle-size-analyzer": "^3.1.0",
+    "webpack-cli": "^5.0.0"
   }
 }
