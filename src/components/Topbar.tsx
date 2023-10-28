@@ -1,10 +1,27 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import { green, yellow } from "@mui/material/colors";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 const TopBarLogo = require("../imgs/topbar_logo.png");
 
 function TopBar() {
+  const scroll = () => {
+    window.scrollTo({
+      top: window.innerHeight * 0.9,
+      behavior: "smooth",
+    });
+  };
+  const scroll_to_About = () => {
+    window.scrollTo({
+      //   top: window.innerHeight * 1.3,
+      top:
+        window.innerWidth > 600
+          ? window.innerHeight * 1.3
+          : window.innerHeight * 1.62,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Box
       sx={{
@@ -19,13 +36,6 @@ function TopBar() {
         boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
       }}
     >
-      {/* <Typography
-        variant="h5"
-        component="div"
-        sx={{ flexGrow: 1, color: "white", fontWeight: 300 }}
-      >
-        JAC
-      </Typography> */}
       <img
         src={TopBarLogo}
         alt="JAC Logo"
@@ -33,58 +43,44 @@ function TopBar() {
       />
       <Box
         sx={{
-          //   color: yellow.A700,
           fontWeight: 300,
           display: "flex",
           width: "40%",
-          justifyContent: "space-evenly",
+          justifyContent: window.innerWidth > 600 ? "space-evenly" : "right",
         }}
       >
-        <Typography
+        <Button
+          onClick={scroll}
           sx={{
-            color: "black",
+            color: "white",
             marginRight: 1.5,
             fontWeight: 500,
             transition: "all 0.2s ease",
             display: "flex",
-            ":hover": {
-              borderBottom: "1px solid white",
-
-              //   color: yellow[500],
-            },
           }}
         >
           About
-        </Typography>
-        <Typography
+        </Button>
+        <Button
+          onClick={scroll_to_About}
           sx={{
-            color: "black",
+            color: "white",
             marginRight: 1.5,
             fontWeight: 500,
-            transition: "all 0.2s ease",
             display: "flex",
-            ":hover": {
-              borderBottom: "1px solid white",
-              //   color: yellow[500],
-            },
           }}
         >
           Services
-        </Typography>
-        <Typography
+        </Button>
+        <Button
           sx={{
-            color: "black",
+            color: "white",
             fontWeight: 500,
-            transition: "all 0.2s ease",
             display: "flex",
-            ":hover": {
-              borderBottom: "1px solid white",
-              //   color: yellow[500],
-            },
           }}
         >
           Contact
-        </Typography>
+        </Button>
       </Box>
     </Box>
   );

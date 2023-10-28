@@ -1,5 +1,8 @@
 import {
   ArrowDownward,
+  JoinRight,
+  NavigateNext,
+  PointOfSale,
   RadioButtonCheckedOutlined,
   Star,
 } from "@mui/icons-material";
@@ -35,7 +38,7 @@ const Services = () => {
         alignItems: "center",
         backgroundImage: `url(${Service_Bg})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "right",
         backgroundRepeat: "no-repeat",
         height: "100vh",
       }}
@@ -50,6 +53,7 @@ const Services = () => {
             paddingTop: "4vh",
             textAlign: "center",
             color: "white",
+            textDecorationLine: "underline",
           }}
         >
           Services
@@ -60,7 +64,12 @@ const Services = () => {
           borderRadius: "10px",
           minWidth: "80%",
           minHeight: "70%",
-          backgroundColor: "rgba(0,0,0,0.5)",
+          //   backgroundColor: screen_size > 600 ? "" :
+          //    "rgba(0,0,0,0.5)",
+          backgroundImage: screen_size > 600 ? "" : `url(${Service_Secondary})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundColor: screen_size < 600 ? "" : "rgba(40,30,32,0.5)",
           display: "flex",
           overflow: "hidden",
         }}
@@ -71,23 +80,29 @@ const Services = () => {
             alignItems: "center",
           }}
         >
-          {serviveList.map((service) => (
+          {serviveList.map((service, index) => (
             <Typography
+              key={index}
               variant={screen_size > 600 ? "h6" : "subtitle1"}
               component="div"
               sx={{
                 padding: 1,
+                display: "flex",
+                // justifyContent: "flex-start",
                 fontWeight: 300,
                 color: "white",
+                backgroundColor: screen_size > 600 ? "" : "rgba(0,0,0,0.3)",
               }}
             >
-              <RadioButtonCheckedOutlined /> {service}
+              {/* <RadioButtonCheckedOutlined />  */}
+              <NavigateNext /> {service}
             </Typography>
           ))}
         </Box>
         <Box
           sx={{
             flexGrow: 1,
+            flexShrink: 1,
             position: "relative",
             display: "flex",
             flexDirection: "column",
@@ -95,6 +110,7 @@ const Services = () => {
             backgroundImage: `url(${Service_Secondary})`,
             boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
             backgroundSize: "cover",
+            overflow: "visible",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             height: "100vh",

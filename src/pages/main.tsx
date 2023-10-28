@@ -3,6 +3,12 @@ import React from "react";
 const Main_Bg = require("../imgs/main_bg.jpeg");
 
 const Main = () => {
+  const scroll = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
   return (
     <Box
       sx={{
@@ -16,6 +22,7 @@ const Main = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         height: "90vh",
+        borderBottom: "10px solid #9fc4c8",
       }}
     >
       <Box>
@@ -59,6 +66,7 @@ const Main = () => {
         </Typography>
       </Box>
       <Button
+        onClick={scroll}
         variant="contained"
         sx={{
           marginTop: 5,
