@@ -14,6 +14,7 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
+    "@vercel/analytics": "^1.1.1",
     "cli": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
