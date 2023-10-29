@@ -64,8 +64,7 @@ const Services = () => {
           borderRadius: "10px",
           minWidth: "80%",
           minHeight: "70%",
-          //   backgroundColor: screen_size > 600 ? "" :
-          //    "rgba(0,0,0,0.5)",
+          margin: screen_size > 600 ? "auto" : "10px",
           backgroundImage: screen_size > 600 ? "" : `url(${Service_Secondary})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -78,6 +77,7 @@ const Services = () => {
           sx={{
             height: "100%",
             alignItems: "center",
+            overflow: "auto",
           }}
         >
           {serviveList.map((service, index) => (
@@ -88,13 +88,11 @@ const Services = () => {
               sx={{
                 padding: 1,
                 display: "flex",
-                // justifyContent: "flex-start",
                 fontWeight: 300,
                 color: "white",
                 backgroundColor: screen_size > 600 ? "" : "rgba(0,0,0,0.3)",
               }}
             >
-              {/* <RadioButtonCheckedOutlined />  */}
               <NavigateNext /> {service}
             </Typography>
           ))}
@@ -120,9 +118,10 @@ const Services = () => {
       <Button
         variant="contained"
         size="small"
+        disabled
         sx={{
           backgroundColor: " #50413c",
-          opacity: 0.8,
+          opacity: 0,
           borderRadius: "10%",
           alignSelf: "flex-end",
           marginRight: "12px",

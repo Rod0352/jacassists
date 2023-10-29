@@ -22,6 +22,13 @@ function TopBar() {
     });
   };
 
+  const scroll_all_the_way_down = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Box
       sx={{
@@ -57,6 +64,10 @@ function TopBar() {
             fontWeight: 500,
             transition: "all 0.2s ease",
             display: "flex",
+            ":hover": {
+              backgroundColor: "rgba(0,0,0,0)",
+              textDecorationLine: "underline",
+            },
           }}
         >
           About
@@ -68,15 +79,24 @@ function TopBar() {
             marginRight: 1.5,
             fontWeight: 500,
             display: "flex",
+            ":hover": {
+              backgroundColor: "rgba(0,0,0,0)",
+              textDecorationLine: "underline",
+            },
           }}
         >
           Services
         </Button>
         <Button
+          onClick={scroll_all_the_way_down}
           sx={{
             color: "white",
             fontWeight: 500,
             display: "flex",
+            ":hover": {
+              backgroundColor: "rgba(0,0,0,0)",
+              textDecorationLine: "underline",
+            },
           }}
         >
           Contact

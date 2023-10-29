@@ -23,7 +23,8 @@ const About = () => {
           //   flexGrow: 1,
           width: screen.width > 600 ? "60%" : "90%",
           margin: "auto",
-          borderRadius: "10px",
+          //   borderRadius: "10px",
+          opacity: 0.94,
           position: "relative",
           display: "flex",
           flexDirection: "row",
@@ -89,7 +90,7 @@ const About = () => {
             quibusdam, quas, voluptates doloribus quia voluptatum voluptate
           </Typography>
         </Box>
-        <Button
+        {/* <Button
           variant="contained"
           size="small"
           sx={{
@@ -108,7 +109,7 @@ const About = () => {
           }}
         >
           <ArrowDownward />
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   );
