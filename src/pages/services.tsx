@@ -49,11 +49,15 @@ const Services = () => {
           component="div"
           sx={{
             padding: 1.5,
+            paddingTop: 11,
+            // paddingBottom: 8,
+            pb: screen_size > 600 ? 8 : 4,
+            fontFamily: "Lora",
             fontWeight: 400,
-            paddingTop: "4vh",
             textAlign: "center",
             color: "white",
             textDecorationLine: "underline",
+            textUnderlineOffset: "5px",
           }}
         >
           Services
@@ -62,6 +66,7 @@ const Services = () => {
       <Paper
         sx={{
           borderRadius: "10px",
+          // paddingTop: "4vh",
           minWidth: "80%",
           minHeight: "70%",
           margin: screen_size > 600 ? "auto" : "10px",

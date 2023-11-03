@@ -34,6 +34,7 @@ const Main = () => {
             color: "white",
             fontWeight: 300,
             paddingTop: "17vh",
+            fontFamily: "Lora",
           }}
         >
           JAC, Virtual Assistants
