@@ -127,12 +127,12 @@ const Contact = () => {
           display: "flex",
           alignItems: "flex-start",
           flexWrap: "wrap",
-          justifyContent: "space-evenly",
+          justifyContent: "center",
           width: "80%",
           margin: "auto",
         }}
       >
-        <Card sx={{ width: 345, background: BG_GRAY, mb: 6 }}>
+        <Card sx={{ width: 345, background: BG_GRAY, mb: 6, mr: 1 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -220,7 +220,7 @@ const Contact = () => {
             </CardContent>
           </Collapse>
         </Card>
-        <Card sx={{ width: 345, background: BG_GRAY, mb: 7 }}>
+        <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
           <CardActionArea>
             <CardMedia
               component="img"
