@@ -50,7 +50,7 @@ const Services = () => {
         backgroundSize: "cover",
         backgroundPosition: "right",
         backgroundRepeat: "no-repeat",
-        height: "100vh",
+        // height: "100vh",/
       }}
     >
       <Box>
@@ -60,7 +60,7 @@ const Services = () => {
           sx={{
             // padding: 1.5,
             paddingTop: 11,
-            // paddingBottom: 8,
+            paddingBottom: 8,
             // pb: screen_size > 600 ? 8 : 4,
             fontFamily: "Lora",
             fontWeight: 400,
@@ -169,6 +169,127 @@ const Services = () => {
           }}
         ></Box> */}
       </Paper>
+      <Typography variant="h6" component="div" sx={{ color: "white" }} mt={2}>
+        Pricing
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          width: "100%",
+          mt: 4,
+        }}
+      >
+        <Box
+          sx={{
+            border: "1.2px solid white",
+            borderRadius: "6px",
+            flex: 1,
+            mr: 1,
+            ml: 1,
+            transition: "all 0.2s ease",
+            ":hover": {
+              boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
+              border: "1.9px solid bisque ",
+            },
+            // ":active": {
+            //   backgroundColor: "bisque",
+            //   color: "darkslategray",
+            // },
+            // ":focus": {
+            //   backgroundColor: "bisque",
+            //   color: "darkslategray",
+            // },
+          }}
+        >
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            Package 1
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            20/hr per month
+          </Typography>
+          <Typography
+            variant="subtitle2"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            (5 hours per week)
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            $700
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            border: "1.2px solid white",
+            borderRadius: "6px",
+            flex: 1,
+            mr: 1,
+            ml: 1,
+            transition: "all 0.2s ease",
+            ":hover": {
+              boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
+              border: "1.9px solid bisque ",
+            },
+          }}
+        >
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            Package 2
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            40/hr per month
+          </Typography>
+          <Typography
+            variant="subtitle2"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            (10 hours per week)
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            $1320
+          </Typography>
+        </Box>
+      </Box>
+      <Typography
+        variant="subtitle2"
+        component="div"
+        sx={{ color: "white", textAlign: "center", mt: 2 }}
+      >
+        * Over 40 hours per month can be negotiated as well
+      </Typography>
+      <Typography
+        variant="subtitle2"
+        component="div"
+        sx={{ color: "white", textAlign: "center", mt: 2 }}
+      >
+        * Packages can be paid on the first of the month or broken up into two
+        payments
+      </Typography>
       <Button
         variant="contained"
         size="small"
