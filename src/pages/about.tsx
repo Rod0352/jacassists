@@ -157,6 +157,22 @@ const About = () => {
             </span>{" "}
             assists we're confident in our ability to coordinate, organize, and
             resolve any task sent our way.
+            {/* JAC Virtual Assistants LLC was founded in 2023 by Jess Coleman, who
+            wanted to utilize her strengths to provide exceptional virtual
+            assistance to medical and mental health providers. We specialize in
+            calendar management, task delegation, email responses, and all other
+            administrative duties so that you don't have to worry about them.
+            Our team takes pride in handling every detail, freeing you up to
+            focus on what you do best. We are confident in our ability to
+            coordinate, organize, and solve any task that comes our way. */}
+            <br></br>
+            <br></br>
+            As a clinician, your top priority is providing quality care to your
+            patients. However, finding reliable assistance can be a challenge.
+            We understand this and are here to help. Our team is composed of
+            experienced professionals with clean backgrounds and HIPAA
+            certifications. Let us assist you in providing the best possible
+            care to your clients.
           </Typography>
         </Box>
       </Box>

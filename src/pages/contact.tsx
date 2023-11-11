@@ -202,20 +202,51 @@ const Contact = () => {
                   color: "white",
                 }}
               >
-                K. Coleman is ..
+                Meet Jess:
               </Typography>
               <Typography
                 sx={{
                   color: "white",
                 }}
               >
-                an Ohio native currently residing in Columbus. She received a
-                Bachelor of Fine Art in Interior Design with a focus in
-                Woodworking from The Columbus College of Art & Design in 2017.
-                While she’s not working on her own business, walking her pups,
-                or exercising, She's Jess's Right-Hand Woman (or Administrative
-                Assistant) for JAC Assists. Organized, HIPAA certified, and
-                equipped to catch whatever is thrown at her!
+                A Passionate Business Owner and Mental Health Advocate Jess is a
+                proud Kent State University graduate with a BA in Psychology and
+                a minor in Justice Studies. Her career started as a caseworker
+                for state and federal inmates in a halfway house for eight
+                years, and then as a caseworker for Drug Court participants for
+                one year. She also worked for one year in the intake department
+                of a children's psychiatry and psychology office.
+                <br></br>
+                As a married mother of two, Jess tried to be a stay-at-home mom
+                for a couple of years but found herself unfulfilled. In 2022,
+                she began working as a VA and then branched off to establish her
+                own business in 2023. Jess is passionate about helping people
+                and has always been fascinated by the human mind and its
+                connection to behavior. Being a VA allows her to remain
+                connected to the mental health world, help those in need, and be
+                present for her family.
+                <br></br>
+                Her years of experience as a caseworker provided her with
+                invaluable insight into the criminal justice system and the
+                challenges that individuals face upon reentry. It also taught
+                her the importance of empathy and understanding when working
+                with people who may have experienced trauma or difficult life
+                circumstances. Her time in the children's psychiatry and
+                psychology office further deepened her understanding of mental
+                health and its impact across all stages of life.
+                <br></br>
+                Starting her own business as a VA has been a dream come true.
+                Jess now has the flexibility to work with clients on her own
+                terms and customize her services to meet their unique needs.
+                Whether it's managing incoming patient inquiries, provider
+                schedules, or billing, she takes pride in being a compassionate
+                and trustworthy resource for those she works with.
+                <br></br>
+                As she looks ahead, Jess is excited to continue growing her
+                business and expanding her skills as a business owner. She is
+                grateful for the opportunities that her education and work
+                experience have provided her and eager to use her knowledge and
+                passion to make a positive impact on the world around her.
               </Typography>
             </CardContent>
           </Collapse>
@@ -304,6 +335,104 @@ const Contact = () => {
                 or exercising, She's Jess's Right-Hand Woman (or Administrative
                 Assistant) for JAC Assists. Organized, HIPAA certified, and
                 equipped to catch whatever is thrown at her!
+              </Typography>
+            </CardContent>
+          </Collapse>
+        </Card>
+        <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="175"
+              image={Portrait2}
+              alt="Kirsten Coleman"
+            />
+            <CardContent
+              sx={{
+                backgroundColor: BG_GRAY,
+                p: "10px",
+              }}
+            >
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{
+                  color: "white",
+                  fontWeight: 500,
+                }}
+              >
+                Sarah ???
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  color: "white",
+                }}
+              >
+                Administrative Assistant ??
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  color: "white",
+                }}
+                onClick={handle_phone_click}
+              >
+                330-203-1505
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  color: "white",
+                }}
+                onClick={handle_email_click}
+              >
+                krcoleman@jacassists.com{" "}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions disableSpacing>
+            <ExpandMore
+              expand={expanded2}
+              onClick={handleExpandClick2}
+              aria-expanded={expanded2}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </ExpandMore>
+          </CardActions>
+          <Collapse in={expanded2} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography
+                sx={{
+                  color: "white",
+                }}
+              >
+                Meet Sarah:{" "}
+              </Typography>
+              <Typography
+                sx={{
+                  color: "white",
+                }}
+              >
+                A Committed Mental Health Professional and Devoted Parent Sarah
+                is a highly qualified mental health professional with over a
+                decade of experience in both in-office and direct care settings.
+                She is a graduate of the University of Mount Union, where she
+                earned a BA in sociology with a minor in Gender Studies.
+                Throughout her career, Sarah has gained valuable experience
+                working in various roles, including as an inpatient psych tech,
+                an intake department member for children's outpatient psychiatry
+                and psychology, a direct care provider with a QMHS (current NPI
+                number), and a prevention specialist with current RA
+                certification. Additionally, she has served as a family court
+                pretrial release officer for juvenile offenders and has
+                experience as an independent living supervisor. Despite her
+                impressive professional background, Sarah's family and friends
+                always come first. She is a dedicated mother of three and is
+                known for her impeccable attention to detail, organizational
+                skills, and unwavering willingness to tackle any challenge.
               </Typography>
             </CardContent>
           </Collapse>
