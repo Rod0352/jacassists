@@ -37,9 +37,9 @@ const Main = () => {
             fontFamily: "Lora",
           }}
         >
-          JAC, Virtual Assistants
+          JAC, Virtual Assistants LLC
         </Typography>
-        <Typography
+        {/* <Typography
           variant="subtitle1"
           component="div"
           sx={{
@@ -51,9 +51,9 @@ const Main = () => {
           }}
         >
           HIPAA certified and background checked virtual assistants
-        </Typography>
+        </Typography> */}
         <Typography
-          variant="subtitle1"
+          variant="h6"
           component="div"
           sx={{
             padding: 1.5,
@@ -61,6 +61,7 @@ const Main = () => {
             color: "white",
             textAlign: "end",
             fontWeight: 300,
+            fontFamily: "Lora",
           }}
         >
           Founded in 2023

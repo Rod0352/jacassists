@@ -1,3 +1,4 @@
+import { HeatPumpSharp, LiveHelp } from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Box,
@@ -8,12 +9,14 @@ import {
   CardContent,
   CardMedia,
   Collapse,
+  Divider,
   IconButton,
   IconButtonProps,
   Typography,
   styled,
 } from "@mui/material";
 import React, { useEffect } from "react";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 const Portrait = require("../imgs/jess_main.jpeg");
 const Portrait2 = require("../imgs/kirsten_new.jpeg");
 const bg = require("../imgs/contact_bg.jpeg");
@@ -73,6 +76,8 @@ const Contact = () => {
       document.removeEventListener("click", handleClickOutside, true);
     };
   });
+
+  const screen_size = window.innerWidth;
 
   return (
     <Box
@@ -163,9 +168,9 @@ const Contact = () => {
                   color: "white",
                 }}
               >
-                Owner
+                Founder & CEO
               </Typography>
-              <Typography
+              {/* <Typography
                 variant="subtitle1"
                 sx={{
                   color: "white",
@@ -182,7 +187,7 @@ const Contact = () => {
                 onClick={handle_email_click}
               >
                 jacoleman@jacassists.com
-              </Typography>
+              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
@@ -284,7 +289,7 @@ const Contact = () => {
               >
                 Administrative Assistant
               </Typography>
-              <Typography
+              {/* <Typography
                 variant="subtitle1"
                 sx={{
                   color: "white",
@@ -301,7 +306,7 @@ const Contact = () => {
                 onClick={handle_email_click}
               >
                 krcoleman@jacassists.com{" "}
-              </Typography>
+              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
@@ -362,7 +367,7 @@ const Contact = () => {
                   fontWeight: 500,
                 }}
               >
-                Sarah ???
+                Sarah Smarr
               </Typography>
               <Typography
                 variant="subtitle1"
@@ -370,9 +375,9 @@ const Contact = () => {
                   color: "white",
                 }}
               >
-                Administrative Assistant ??
+                Virtual Assistant
               </Typography>
-              <Typography
+              {/* <Typography
                 variant="subtitle1"
                 sx={{
                   color: "white",
@@ -389,7 +394,7 @@ const Contact = () => {
                 onClick={handle_email_click}
               >
                 krcoleman@jacassists.com{" "}
-              </Typography>
+              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
@@ -437,14 +442,14 @@ const Contact = () => {
             </CardContent>
           </Collapse>
         </Card>
-        <Button
+        {/* <Button
           variant="contained"
           size="small"
           onClick={handle_top_click}
           sx={{
             backgroundColor: "#183134",
             opacity: 0.8,
-            right: 0,
+            right: 0, 
             position: "absolute",
             borderRadius: "10%",
             alignSelf: "flex-end",
@@ -458,8 +463,197 @@ const Contact = () => {
           }}
         >
           Top
-        </Button>
+        </Button> */}
         T
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "15px",
+          paddingTop: "10px",
+          borderRadius: "10px",
+          border: "1.1px solid white",
+          width: "fit-content",
+          margin: "auto",
+          boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38)",
+          mb: 5,
+          backgroundColor: "rgba(40,30,32,0.6)",
+        }}
+      >
+        <Typography variant="h5" sx={{ color: "white" }}>
+          How to Reach Us!
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: "white",
+          }}
+          onClick={handle_phone_click}
+        >
+          330-203-1505
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: "white",
+          }}
+          onClick={handle_email_click}
+        >
+          jacoleman@jacassists.com
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          // width: "100%",
+          backgroundColor: "rgba(40,30,32,0.6)",
+          margin: "auto",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          border: "1.1px solid white",
+          borderRadius: "10px",
+          padding: "15px",
+          maxWidth: screen_size > 600 ? "30%" : "94%",
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{
+            color: "white",
+            textAlign: "center",
+            mb: 1,
+          }}
+        >
+          Frequently Asked Questions
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: "white",
+            textDecorationLine: "underline",
+            textUnderlineOffset: "5px",
+          }}
+        >
+          What systems are you familiar with?
+        </Typography>
+        <Divider />
+        <Typography variant="subtitle2" sx={{ color: "white", mt: 2 }}>
+          * EHR’s: SimplePractice, TherapyNotes, (limited knowledge of
+          TheraNest)
+          <br></br>* Phone systems: Google Voice, Spruce, Grasshopper
+          <br></br>* Payroll: Gusto, Square
+          <br></br>* Organization tools: Notion, ClickUp
+          <br></br>* Google Workspace & apps
+          <br></br>* Microsoft Outlook & apps
+          <br></br>* Adobe Acrobat
+          <br></br>* Canva
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: "white",
+            textDecorationLine: "underline",
+            textUnderlineOffset: "5px",
+            alignContent: "center",
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+            mt: 2,
+          }}
+        >
+          Do I have to train you?{" "}
+        </Typography>
+        <Divider />
+        <Typography
+          variant="subtitle2"
+          sx={{
+            color: "white",
+            alignItems: "center",
+            alignContent: "center",
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            mt: 2,
+          }}
+        >
+          There will always be the initial learning curve! Every practice does
+          things differently; we rely on open communication and patience while
+          we learn how you prefer things to be done.
+        </Typography>
+      </Box>
+      <Button
+        variant="contained"
+        size="small"
+        onClick={handle_top_click}
+        sx={{
+          backgroundColor: "transparent",
+          opacity: 0.8,
+          right: 0,
+          // position: "absolute",
+          marginTop: "10px",
+          borderRadius: "10%",
+          alignSelf: "flex-end",
+          fontWeight: 600,
+          marginRight: "12px",
+          fontSize: "1rem",
+          letterSpacing: "1px",
+          border: "3px solid white",
+          ":hover": {
+            backgroundColor: "bisque",
+            color: "darkslategray",
+          },
+        }}
+      >
+        UP
+      </Button>
+      {/* Made with love copyright */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          backgroundColor: "rgba(40,30,32,0.6)",
+          borderTop: "1.1px solid white",
+          borderBottom: "1.1px solid white",
+          mt: 5,
+          mb: 0,
+          // p: 1,
+        }}
+      >
+        <Typography
+          variant="subtitle2"
+          sx={{
+            color: "white",
+            textAlign: "center",
+            // mb: 1,
+          }}
+        >
+          Made with{" "}
+          <FavoriteIcon
+            sx={{
+              color: "red",
+              fontSize: "1rem",
+              letterSpacing: "1px",
+              mr: "1.2px",
+              ml: "1.2px",
+              mb: "-0.2rem",
+            }}
+            //  mt: 1
+          />{" "}
+          by{" "}
+          <a
+            href="https://www.linkedin.com/in/rodney-scott0352/"
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecorationLine: "none", color: "green" }}
+          >
+            Rodney
+          </a>
+        </Typography>
       </Box>
     </Box>
   );

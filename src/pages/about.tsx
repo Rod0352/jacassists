@@ -52,16 +52,16 @@ const About = () => {
               fontFamily: "Lora",
             }}
           >
-            What is
-            <span
-              style={{
+            What we're about
+            {/* style={{
                 color: "white",
                 marginLeft: "12px",
                 fontFamily: "Lora",
               }}
             >
               JAC?
-            </span>
+              <span
+            </span> */}
           </Typography>
           <Typography
             variant="subtitle1"
@@ -89,17 +89,9 @@ const About = () => {
               fontFamily: "Lora",
             }}
           >
-            <span
-              style={
-                {
-                  // color: "white",
-                }
-              }
-            >
-              JAC
-            </span>{" "}
-            assists came to fruition in the midst of 2023 when our founder,
-            Jess, decided it was time to put her strengths to the test.{" "}
+            JAC Virtual Assistants came to fruition in the midst of 2023 when
+            our founder, Jess, decided it was time to put her strengths to the
+            test.{" "}
             <span
               style={{
                 color: "white",
@@ -145,18 +137,8 @@ const About = () => {
             </span>
             , and more is what WE tackle so YOU don't have to. We enjoy taking
             care of the details so you can feel less of the weight and more of
-            the freedom. At{" "}
-            <span
-              style={
-                {
-                  // color: "white",
-                }
-              }
-            >
-              JAC
-            </span>{" "}
-            assists we're confident in our ability to coordinate, organize, and
-            resolve any task sent our way.
+            the freedom. At JAC Virtual Assistants we're confident in our
+            ability to coordinate, organize, and resolve any task sent our way.
             {/* JAC Virtual Assistants LLC was founded in 2023 by Jess Coleman, who
             wanted to utilize her strengths to provide exceptional virtual
             assistance to medical and mental health providers. We specialize in

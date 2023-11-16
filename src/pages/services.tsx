@@ -33,6 +33,7 @@ const Services = () => {
     "Organizing current systems, spreadsheets, tracking",
     "Transcribing audio notes",
     "Social media posts",
+    "Canva Projects",
   ];
 
   const screen_size = window.innerWidth;
@@ -288,7 +289,7 @@ const Services = () => {
         sx={{ color: "white", textAlign: "center", mt: 2 }}
       >
         * Packages can be paid on the first of the month or broken up into two
-        payments
+        monthly payments
       </Typography>
       <Button
         variant="contained"
