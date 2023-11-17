@@ -52,7 +52,7 @@ const About = () => {
               fontFamily: "Lora",
             }}
           >
-            What we're about
+            ABOUT US
             {/* style={{
                 color: "white",
                 marginLeft: "12px",

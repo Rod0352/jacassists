@@ -220,6 +220,7 @@ const Contact = () => {
                 sx={{
                   color: "white",
                 }}
+                variant="subtitle1"
               >
                 Meet Jess:
               </Typography>
@@ -228,23 +229,20 @@ const Contact = () => {
                   color: "white",
                 }}
               >
-                A Passionate Business Owner and Mental Health Advocate Jess is a
-                proud Kent State University graduate with a BA in Psychology and
-                a minor in Justice Studies. Her career started as a caseworker
-                for state and federal inmates in a halfway house for eight
-                years, and then as a caseworker for Drug Court participants for
-                one year. She also worked for one year in the intake department
-                of a children's psychiatry and psychology office.
-                <br></br>
+                Jess is a proud Kent State University graduate with a BA in
+                Psychology and a minor in Justice Studies. She began her career
+                in mental health as a caseworker for state and federal inmates
+                in a halfway house, then a caseworker for Drug Court
+                participants. She also worked in the intake department of a
+                children's psychiatry and psychology office. <br></br> <br></br>
                 As a married mother of two, Jess tried to be a stay-at-home mom
-                for a couple of years but found herself unfulfilled. In 2022,
-                she began working as a VA and then branched off to establish her
-                own business in 2023. Jess is passionate about helping people
-                and has always been fascinated by the human mind and its
-                connection to behavior. Being a VA allows her to remain
-                connected to the mental health world, help those in need, and be
-                present for her family.
-                <br></br>
+                but found herself unfulfilled. In 2022, she began working as a
+                VA and then branched off to establish her own business in 2023.
+                Jess is passionate about helping people and has always been
+                fascinated by the human mind and its connection to behavior.
+                Being a VA allows her to remain connected to the mental health
+                world, help those in need, and be present for her family.
+                <br></br> <br></br>
                 Her years of experience as a caseworker provided her with
                 invaluable insight into the criminal justice system and the
                 challenges that individuals face upon reentry. It also taught
@@ -252,14 +250,14 @@ const Contact = () => {
                 with people who may have experienced trauma or difficult life
                 circumstances. Her time in the children's psychiatry and
                 psychology office further deepened her understanding of mental
-                health and its impact across all stages of life.
+                health and its impact across all stages of life.<br></br>{" "}
                 <br></br>
                 Starting her own business as a VA has been a dream come true.
                 Jess now has the flexibility to work with clients on her own
                 terms and customize her services to meet their unique needs.
                 Whether it's managing incoming patient inquiries, provider
                 schedules, or billing, she takes pride in being a compassionate
-                and trustworthy resource for those she works with.
+                and trustworthy resource for those she works with.<br></br>{" "}
                 <br></br>
                 As she looks ahead, Jess is excited to continue growing her
                 business and expanding her skills as a business owner. She is
@@ -347,20 +345,24 @@ const Contact = () => {
                   color: "white",
                 }}
               >
-                K. Coleman is ..
+                {/* Meet Kirsten (AKA, “K”): */}
+                Meet Kirsten{" "}
+                <span style={{ color: "white", fontSize: ".9rem" }}>
+                  (AKA, “K”) :
+                </span>
               </Typography>
               <Typography
                 sx={{
                   color: "white",
                 }}
               >
-                an Ohio native currently residing in Columbus. She received a
-                Bachelor of Fine Art in Interior Design with a focus in
-                Woodworking from The Columbus College of Art & Design in 2017.
-                While she’s not working on her own business, walking her pups,
-                or exercising, She's Jess's Right-Hand Woman (or Administrative
-                Assistant) for JAC Assists. Organized, HIPAA certified, and
-                equipped to catch whatever is thrown at her!
+                As a creative mind, K earned a Bachelor of Fine Art in Interior
+                Design, with a focus on Woodworking, from The Columbus College
+                of Art & Design. When she's not walking her dogs or working out,
+                K. Coleman is Jess's right-hand woman at JAC Virtual Assistants
+                LLC. She's highly organized, HIPAA certified and ready to tackle
+                any challenge. Additionally, she is skilled in Canva and has a
+                knack for creativity.
               </Typography>
             </CardContent>
           </Collapse>
@@ -428,7 +430,7 @@ const Contact = () => {
                 color: "white",
               }}
               expand={expanded3}
-              onClick={handleExpandClick3}
+              onClick={() => setExpanded3(!expanded3)}
               aria-expanded={expanded3}
               aria-label="show more"
             >
@@ -449,23 +451,24 @@ const Contact = () => {
                   color: "white",
                 }}
               >
-                A Committed Mental Health Professional and Devoted Parent Sarah
-                is a highly qualified mental health professional with over a
-                decade of experience in both in-office and direct care settings.
-                She is a graduate of the University of Mount Union, where she
-                earned a BA in sociology with a minor in Gender Studies.
-                Throughout her career, Sarah has gained valuable experience
-                working in various roles, including as an inpatient psych tech,
-                an intake department member for children's outpatient psychiatry
-                and psychology, a direct care provider with a QMHS (current NPI
-                number), and a prevention specialist with current RA
-                certification. Additionally, she has served as a family court
-                pretrial release officer for juvenile offenders and has
-                experience as an independent living supervisor. Despite her
-                impressive professional background, Sarah's family and friends
-                always come first. She is a dedicated mother of three and is
-                known for her impeccable attention to detail, organizational
-                skills, and unwavering willingness to tackle any challenge.
+                Sarah is a highly qualified mental health professional with over
+                a decade of experience in both in-office and direct care
+                settings. She is a graduate of the University of Mount Union,
+                where she earned a BA in sociology with a minor in Gender
+                Studies. Throughout her career, Sarah has gained valuable
+                experience working in various roles, including as an inpatient
+                psych tech, an intake department member for children's
+                outpatient psychiatry and psychology, a direct care provider
+                with a QMHS (current NPI number), and a prevention specialist
+                with current RA certification. Additionally, she has served as a
+                family court pretrial release officer for juvenile offenders and
+                has experience as an independent living supervisor.
+                <br></br> <br></br>
+                Despite her impressive professional background, Sarah's family
+                and friends always come first. She is a dedicated mother of
+                three and is known for her impeccable attention to detail,
+                organizational skills, and unwavering willingness to tackle any
+                challenge.
               </Typography>
             </CardContent>
           </Collapse>

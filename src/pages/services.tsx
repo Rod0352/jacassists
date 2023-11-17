@@ -170,7 +170,12 @@ const Services = () => {
           }}
         ></Box> */}
       </Paper>
-      <Typography variant="h6" component="div" sx={{ color: "white" }} mt={2}>
+      <Typography
+        variant="h6"
+        component="div"
+        sx={{ color: "white", fontFamily: "lora" }}
+        mt={3}
+      >
         Pricing
       </Typography>
       <Box
@@ -178,6 +183,7 @@ const Services = () => {
           display: "flex",
           justifyContent: "space-around",
           width: "100%",
+          maxWidth: "600px",
           mt: 4,
         }}
       >
@@ -185,7 +191,10 @@ const Services = () => {
           sx={{
             border: "1.2px solid white",
             borderRadius: "6px",
-            flex: 1,
+            // flex: 1,
+            width: "fit-content",
+            padding: "38px",
+
             mr: 1,
             ml: 1,
             transition: "all 0.2s ease",
@@ -206,7 +215,14 @@ const Services = () => {
           <Typography
             variant="h5"
             component="div"
-            sx={{ color: "white", textAlign: "center", fontFamily: "Lora" }}
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontFamily: "Lora",
+              textDecorationLine: "underline",
+              textUnderlineOffset: "5px",
+              paddingBottom: "36px",
+            }}
           >
             Package 1
           </Typography>
@@ -236,7 +252,9 @@ const Services = () => {
           sx={{
             border: "1.2px solid white",
             borderRadius: "6px",
-            flex: 1,
+            // flex: 1,
+            width: "fit-content",
+            padding: "38px",
             mr: 1,
             ml: 1,
             transition: "all 0.2s ease",
@@ -249,7 +267,14 @@ const Services = () => {
           <Typography
             variant="h5"
             component="div"
-            sx={{ color: "white", textAlign: "center", fontFamily: "Lora" }}
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontFamily: "Lora",
+              textDecorationLine: "underline",
+              textUnderlineOffset: "5px",
+              paddingBottom: "36px",
+            }}
           >
             Package 2
           </Typography>
