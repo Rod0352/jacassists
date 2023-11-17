@@ -53,6 +53,7 @@ const Contact = () => {
 
   const [expanded, setExpanded] = React.useState(false);
   const [expanded2, setExpanded2] = React.useState(false);
+  const [expanded3, setExpanded3] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -62,11 +63,16 @@ const Contact = () => {
     setExpanded2(!expanded2);
   };
 
+  const handleExpandClick3 = () => {
+    setExpanded3(!expanded3);
+  };
+
   // listen for click outside of card to close
   const handleClickOutside = (event: any) => {
     if (event.target.id !== "card") {
       setExpanded(false);
       setExpanded2(false);
+      setExpanded3(false);
     }
   };
 
@@ -399,15 +405,15 @@ const Contact = () => {
           </CardActionArea>
           <CardActions disableSpacing>
             <ExpandMore
-              expand={expanded2}
-              onClick={handleExpandClick2}
-              aria-expanded={expanded2}
+              expand={expanded3}
+              onClick={handleExpandClick3}
+              aria-expanded={expanded3}
               aria-label="show more"
             >
               <ExpandMoreIcon />
             </ExpandMore>
           </CardActions>
-          <Collapse in={expanded2} timeout="auto" unmountOnExit>
+          <Collapse in={expanded3} timeout="auto" unmountOnExit>
             <CardContent>
               <Typography
                 sx={{
@@ -464,7 +470,6 @@ const Contact = () => {
         >
           Top
         </Button> */}
-        T
       </Box>
       <Box
         sx={{
