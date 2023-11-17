@@ -1,4 +1,3 @@
-import { HeatPumpSharp, LiveHelp } from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Box,
@@ -19,6 +18,7 @@ import React, { useEffect } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 const Portrait = require("../imgs/jess_main.jpeg");
 const Portrait2 = require("../imgs/kirsten_new.jpeg");
+const Portrait3 = require("../imgs/sarah_main.jpeg");
 const bg = require("../imgs/contact_bg.jpeg");
 const BG_GRAY = "#9e9e9ebf";
 interface ExpandMoreProps extends IconButtonProps {
@@ -355,7 +355,7 @@ const Contact = () => {
             <CardMedia
               component="img"
               height="175"
-              image={Portrait2}
+              image={Portrait3}
               alt="Kirsten Coleman"
             />
             <CardContent
