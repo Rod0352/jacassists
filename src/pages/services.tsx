@@ -206,7 +206,7 @@ const Services = () => {
           <Typography
             variant="h5"
             component="div"
-            sx={{ color: "white", textAlign: "center" }}
+            sx={{ color: "white", textAlign: "center", fontFamily: "Lora" }}
           >
             Package 1
           </Typography>
@@ -249,7 +249,7 @@ const Services = () => {
           <Typography
             variant="h5"
             component="div"
-            sx={{ color: "white", textAlign: "center" }}
+            sx={{ color: "white", textAlign: "center", fontFamily: "Lora" }}
           >
             Package 2
           </Typography>

@@ -20,7 +20,8 @@ const Portrait = require("../imgs/jess_main.jpeg");
 const Portrait2 = require("../imgs/kirsten_new.jpeg");
 const Portrait3 = require("../imgs/sarah_main.jpeg");
 const bg = require("../imgs/contact_bg.jpeg");
-const BG_GRAY = "#9e9e9ebf";
+const BG_GRAY =
+  "linear-gradient(0deg, rgba(255,152,121,0.8407738095238095) 48%, rgba(255,199,121,0.4430147058823529) 92%);";
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
 }
@@ -146,6 +147,7 @@ const Contact = () => {
         <Card sx={{ width: 345, background: BG_GRAY, mb: 6, mr: 1 }}>
           <CardActionArea>
             <CardMedia
+              loading="lazy"
               component="img"
               height="175"
               image={Portrait}
@@ -153,7 +155,7 @@ const Contact = () => {
             />
             <CardContent
               sx={{
-                backgroundColor: BG_GRAY,
+                backgroundColor: "transparent",
                 p: "10px",
               }}
             >
@@ -164,6 +166,7 @@ const Contact = () => {
                 sx={{
                   color: "white",
                   fontWeight: 500,
+                  fontFamily: "Lora",
                 }}
               >
                 Jess Coleman
@@ -172,6 +175,7 @@ const Contact = () => {
                 variant="subtitle1"
                 sx={{
                   color: "white",
+                  fontFamily: "Lora",
                 }}
               >
                 Founder & CEO
@@ -198,6 +202,10 @@ const Contact = () => {
           </CardActionArea>
           <CardActions disableSpacing>
             <ExpandMore
+              sx={{
+                padding: "0px",
+                color: "white",
+              }}
               expand={expanded}
               onClick={handleExpandClick}
               aria-expanded={expanded}
@@ -265,6 +273,7 @@ const Contact = () => {
         <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
           <CardActionArea>
             <CardMedia
+              loading="lazy"
               component="img"
               height="175"
               image={Portrait2}
@@ -272,7 +281,7 @@ const Contact = () => {
             />
             <CardContent
               sx={{
-                backgroundColor: BG_GRAY,
+                backgroundColor: "transparent",
                 p: "10px",
               }}
             >
@@ -283,6 +292,7 @@ const Contact = () => {
                 sx={{
                   color: "white",
                   fontWeight: 500,
+                  fontFamily: "Lora",
                 }}
               >
                 Kirsten Coleman
@@ -291,6 +301,7 @@ const Contact = () => {
                 variant="subtitle1"
                 sx={{
                   color: "white",
+                  fontFamily: "Lora",
                 }}
               >
                 Administrative Assistant
@@ -317,6 +328,10 @@ const Contact = () => {
           </CardActionArea>
           <CardActions disableSpacing>
             <ExpandMore
+              sx={{
+                padding: "0px",
+                color: "white",
+              }}
               expand={expanded2}
               onClick={handleExpandClick2}
               aria-expanded={expanded2}
@@ -353,6 +368,7 @@ const Contact = () => {
         <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
           <CardActionArea>
             <CardMedia
+              loading="lazy"
               component="img"
               height="175"
               image={Portrait3}
@@ -360,7 +376,7 @@ const Contact = () => {
             />
             <CardContent
               sx={{
-                backgroundColor: BG_GRAY,
+                backgroundColor: "transparent",
                 p: "10px",
               }}
             >
@@ -371,6 +387,7 @@ const Contact = () => {
                 sx={{
                   color: "white",
                   fontWeight: 500,
+                  fontFamily: "Lora",
                 }}
               >
                 Sarah Smarr
@@ -379,6 +396,7 @@ const Contact = () => {
                 variant="subtitle1"
                 sx={{
                   color: "white",
+                  fontFamily: "Lora",
                 }}
               >
                 Virtual Assistant
@@ -405,6 +423,10 @@ const Contact = () => {
           </CardActionArea>
           <CardActions disableSpacing>
             <ExpandMore
+              sx={{
+                padding: "0px",
+                color: "white",
+              }}
               expand={expanded3}
               onClick={handleExpandClick3}
               aria-expanded={expanded3}
