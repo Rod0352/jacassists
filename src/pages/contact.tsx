@@ -545,7 +545,7 @@ const Contact = () => {
           border: "1.1px solid white",
           borderRadius: "10px",
           padding: "15px",
-          maxWidth: screen_size > 600 ? "30%" : "94%",
+          maxWidth: "390px",
         }}
       >
         <Typography
