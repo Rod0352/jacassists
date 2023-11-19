@@ -311,7 +311,13 @@ const Services = () => {
       <Typography
         variant="subtitle2"
         component="div"
-        sx={{ color: "white", textAlign: "center", mt: 2 }}
+        sx={{
+          color: "white",
+          textAlign: "center",
+          mt: 2,
+          pl: "32px",
+          pr: "32px",
+        }}
       >
         * Packages can be paid on the first of the month or broken up into two
         monthly payments
