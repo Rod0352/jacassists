@@ -327,13 +327,14 @@ const Contact = () => {
                   color: "white",
                 }}
               >
-                As a creative mind, K earned a Bachelor of Fine Art in Interior
-                Design, with a focus on Woodworking, from The Columbus College
-                of Art & Design. When she's not walking her dogs or working out,
-                K. Coleman is Jess's right-hand woman at JAC Virtual Assistants
-                LLC. She's highly organized, HIPAA certified and ready to tackle
-                any challenge. Additionally, she is skilled in Canva and has a
-                knack for creativity.
+                As a creative mind, K earned a Bachelor Fine Art in Interior
+                Design, from The Columbus College of Art & Design. When she's
+                not saving pups, being creative, or staying active, She’s Jess's
+                right-hand woman at JAC Virtual Assistants LLC. She’s highly
+                organized, HIPAA certified, Theranest and TherapyNotes trained,
+                skilled in Canva, loves a good spreadsheet, and stays ready to
+                tackle any challenge. If you need someone to take the lead on
+                the organization in your life, K is the right fit for you.
               </Typography>
             </CardContent>
           </Collapse>
