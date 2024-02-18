@@ -97,11 +97,6 @@ const Services = () => {
             width: "100%",
             overflow: "auto",
             border: "4px solid bisque",
-            // backgroundImage: `url(${Service_Secondary})`,
-            // backgroundSize: "cover",
-            // backgroundPosition: "center",
-            // backgroundRepeat: "no-repeat",
-            // boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
           }}
         >
           {serviveList.map((service, index) => (
@@ -152,23 +147,6 @@ const Services = () => {
             </Typography>
           ))}
         </Box>
-        {/* <Box
-          sx={{
-            flexGrow: 1,
-            flexShrink: 1,
-            position: "relative",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            backgroundImage: `url(${Service_Secondary})`,
-            boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
-            backgroundSize: "cover",
-            overflow: "visible",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            height: "100vh",
-          }}
-        ></Box> */}
       </Paper>
       <Typography
         variant="h6"
@@ -202,14 +180,6 @@ const Services = () => {
               boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
               border: "1.9px solid bisque ",
             },
-            // ":active": {
-            //   backgroundColor: "bisque",
-            //   color: "darkslategray",
-            // },
-            // ":focus": {
-            //   backgroundColor: "bisque",
-            //   color: "darkslategray",
-            // },
           }}
         >
           <Typography

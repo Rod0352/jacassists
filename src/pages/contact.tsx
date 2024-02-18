@@ -19,6 +19,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 const Portrait = require("../imgs/jess_main.jpeg");
 const Portrait2 = require("../imgs/kirsten_new.jpeg");
 const Portrait3 = require("../imgs/sarah_main.jpeg");
+const Portrait4 = require("../imgs/josie.jpeg");
 const bg = require("../imgs/contact_bg.jpeg");
 const BG_GRAY =
   "linear-gradient(0deg, rgba(255,152,121,0.8407738095238095) 48%, rgba(255,199,121,0.4430147058823529) 92%);";
@@ -55,6 +56,7 @@ const Contact = () => {
   const [expanded, setExpanded] = React.useState(false);
   const [expanded2, setExpanded2] = React.useState(false);
   const [expanded3, setExpanded3] = React.useState(false);
+  const [expanded4, setExpanded4] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -68,12 +70,16 @@ const Contact = () => {
     setExpanded3(!expanded3);
   };
 
+  const handleExpandClick4 = () => {
+    setExpanded4(!expanded4);
+  };
   // listen for click outside of card to close
   const handleClickOutside = (event: any) => {
     if (event.target.id !== "card") {
       setExpanded(false);
       setExpanded2(false);
       setExpanded3(false);
+      setExpanded4(false);
     }
   };
 
@@ -180,24 +186,6 @@ const Contact = () => {
               >
                 Founder & CEO
               </Typography>
-              {/* <Typography
-                variant="subtitle1"
-                sx={{
-                  color: "white",
-                }}
-                onClick={handle_phone_click}
-              >
-                330-203-1505
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  color: "white",
-                }}
-                onClick={handle_email_click}
-              >
-                jacoleman@jacassists.com
-              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
@@ -234,7 +222,8 @@ const Contact = () => {
                 in mental health as a caseworker for state and federal inmates
                 in a halfway house, then a caseworker for Drug Court
                 participants. She also worked in the intake department of a
-                children's psychiatry and psychology office. <br></br> <br></br>
+                children's psychiatry and psychology office. <br></br>
+                {""} <br></br>
                 As a married mother of two, Jess tried to be a stay-at-home mom
                 but found herself unfulfilled. In 2022, she began working as a
                 VA and then branched off to establish her own business in 2023.
@@ -302,26 +291,8 @@ const Contact = () => {
                   fontFamily: "Lora",
                 }}
               >
-                Administrative Assistant
+                Virtual Assistant
               </Typography>
-              {/* <Typography
-                variant="subtitle1"
-                sx={{
-                  color: "white",
-                }}
-                onClick={handle_phone_click}
-              >
-                330-203-1505
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  color: "white",
-                }}
-                onClick={handle_email_click}
-              >
-                krcoleman@jacassists.com{" "}
-              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
@@ -403,24 +374,6 @@ const Contact = () => {
               >
                 Virtual Assistant
               </Typography>
-              {/* <Typography
-                variant="subtitle1"
-                sx={{
-                  color: "white",
-                }}
-                onClick={handle_phone_click}
-              >
-                330-203-1505
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  color: "white",
-                }}
-                onClick={handle_email_click}
-              >
-                krcoleman@jacassists.com{" "}
-              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
@@ -473,28 +426,90 @@ const Contact = () => {
             </CardContent>
           </Collapse>
         </Card>
-        {/* <Button
-          variant="contained"
-          size="small"
-          onClick={handle_top_click}
-          sx={{
-            backgroundColor: "#183134",
-            opacity: 0.8,
-            right: 0, 
-            position: "absolute",
-            borderRadius: "10%",
-            alignSelf: "flex-end",
-            marginRight: "12px",
-            // marginBottom: "3px",
-            border: "3px solid white",
-            ":hover": {
-              backgroundColor: "bisque",
-              color: "darkslategray",
-            },
-          }}
-        >
-          Top
-        </Button> */}
+        <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
+          <CardActionArea>
+            <CardMedia
+              loading="lazy"
+              component="img"
+              height="175"
+              image={Portrait4}
+              alt="Kirsten Coleman"
+            />
+            <CardContent
+              sx={{
+                backgroundColor: "transparent",
+                p: "10px",
+              }}
+            >
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{
+                  color: "white",
+                  fontWeight: 500,
+                  fontFamily: "Lora",
+                }}
+              >
+                Josie
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  color: "white",
+                  fontFamily: "Lora",
+                }}
+              >
+                Virtual Assistant
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions disableSpacing>
+            <ExpandMore
+              sx={{
+                padding: "0px",
+                color: "white",
+              }}
+              expand={expanded4}
+              onClick={handleExpandClick4}
+              aria-expanded={expanded4}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </ExpandMore>
+          </CardActions>
+          <Collapse in={expanded4} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography
+                sx={{
+                  color: "white",
+                }}
+              >
+                Meet Josie:{" "}
+              </Typography>
+              <Typography
+                sx={{
+                  color: "white",
+                }}
+              >
+                Josie brings nine years of experience in the manufacturing
+                sector, where she has held various roles such as Manufacturing
+                Planner, Business Development Manager, and Buyer/Planner.
+                Skilled in procurement, sourcing, quoting, and planning, she
+                also excels in email management, schedule coordination, file
+                organization, and communication.
+                <br></br> <br></br>
+                Josie holds an associate's degree in Business Administration
+                from the University of Northwestern Ohio and is certified as a
+                pharmacy technician. Outside of work, she prioritizes her role
+                as a dedicated wife and mother to two children. Eager to strike
+                a harmonious balance, Josie is now seeking a fulfilling career
+                where she can utilize her skills while maintaining a strong
+                presence at home.
+              </Typography>
+            </CardContent>
+          </Collapse>
+        </Card>
       </Box>
       <Box
         sx={{
@@ -559,7 +574,7 @@ const Contact = () => {
           Frequently Asked Questions
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant="h6"
           sx={{
             color: "white",
             textDecorationLine: "underline",
@@ -581,7 +596,7 @@ const Contact = () => {
           <br></br>* Canva
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant="h6"
           sx={{
             color: "white",
             textDecorationLine: "underline",
@@ -612,7 +627,56 @@ const Contact = () => {
           things differently; we rely on open communication and patience while
           we learn how you prefer things to be done.
         </Typography>
+        <br></br>
+        <Typography
+          variant="h6"
+          sx={{
+            color: "white",
+            textDecorationLine: "underline",
+            textUnderlineOffset: "5px",
+            alignContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            mt: 2,
+          }}
+        >
+          Do you provide virtual assistance solely to mental health practices?
+        </Typography>
+        <Divider />
+        <Typography
+          variant="subtitle2"
+          sx={{
+            color: "white",
+            alignItems: "center",
+            alignContent: "center",
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            mt: 2,
+          }}
+        >
+          No! While mental health is our jam, we’re happy to help any company or
+          business- just shoot us an email and tell us what you’re seeking help
+          with and we’ll see if we’re a good match.
+        </Typography>
       </Box>
+      <Typography
+        variant="h4"
+        sx={{
+          color: "white",
+          fontFamily: "Lora",
+          width: "100%",
+          textAlign: "center",
+          // textDecorationLine: "underline",
+          textUnderlineOffset: "5px",
+          mt: 5,
+          mb: 2,
+        }}
+      >
+        Thanks for stopping by!
+      </Typography>
       <Button
         variant="contained"
         size="small"
@@ -647,8 +711,8 @@ const Contact = () => {
           alignItems: "center",
           width: "100%",
           backgroundColor: "rgba(40,30,32,0.6)",
-          borderTop: "1.1px solid white",
-          borderBottom: "1.1px solid white",
+          // borderTop: "1.1px solid white",
+          // borderBottom: "1.1px solid white",
           mt: 5,
           mb: 0,
           // p: 1,
