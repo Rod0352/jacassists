@@ -330,7 +330,6 @@ const Services = () => {
           >
             $1320
           </Typography>
-          B
         </Box>
       </Box>
       <Typography
