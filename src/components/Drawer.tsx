@@ -6,12 +6,11 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InfoIcon from "@mui/icons-material/Info";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
-import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import CopyrightIcon from "@mui/icons-material/Copyright";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Typography } from "@mui/material";
+const TopBarLogo = require("../imgs/topbar_logo.png");
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 type Anchor = "right";
 
 export default function SwipeableTemporaryDrawer() {
@@ -41,12 +40,28 @@ export default function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <List
+        sx={{
+          paddingTop: 0,
+        }}
+      >
         {["About", "Services", "Contact"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton
               sx={{
                 paddingBottom: 6.5,
+                display: "flex",
+                justifyContent: "space-between",
+                borderTop: "1px solid white",
+                // ":hover": {
+                boxShadow: "-5px 3px 23px -2px rgba(0,0,0,0.12) inset",
+                //   border: "1.9px solid bisque ",
+                // },
+                "&:active": {
+                  boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
+                  // border: "1.9px solid bisque ",
+                  // color: "darkslategray",
+                },
               }}
               onClick={
                 index === 0
@@ -72,7 +87,7 @@ export default function SwipeableTemporaryDrawer() {
                       })
               }
             >
-              <ListItemIcon
+              {/* <ListItemIcon
                 sx={{
                   color: "white",
                 }}
@@ -84,8 +99,20 @@ export default function SwipeableTemporaryDrawer() {
                 ) : (
                   <ContactPhoneIcon />
                 )}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+              </ListItemIcon> */}
+              <Typography
+                // primary={text}
+                variant="h4"
+                sx={{
+                  fontFamily: "'lora', serif", // on hover underline
+                  "&:hover": {
+                    // textDecoration: "underline",
+                  },
+                }}
+              >
+                {text}
+              </Typography>
+              <KeyboardDoubleArrowDownIcon />
             </ListItemButton>
           </ListItem>
         ))}
@@ -112,6 +139,7 @@ export default function SwipeableTemporaryDrawer() {
               "& .MuiDrawer-paper": {
                 // boxSizing: "border-box",
                 // width: "40vw",
+                overflowX: "hidden",
                 backgroundColor: "#5d5353b5",
                 color: "white",
               },
@@ -122,6 +150,55 @@ export default function SwipeableTemporaryDrawer() {
             onOpen={toggleDrawer("right", true)}
           >
             {list("right")}
+            <Box
+              sx={{
+                // border: "1px solid red",
+                width: "99.8%",
+                height: "99.8%",
+                display: "flex",
+                flexDirection: "column",
+                // alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "30%",
+                  // borderRadius: "50%",
+                  // backgroundColor: "white",
+                  opacity: 1,
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  // boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
+                }}
+              >
+                <img
+                  src={TopBarLogo}
+                  alt="JAC Logo"
+                  style={{
+                    height: "50%",
+                    color: " white ",
+                    marginLeft: 1.5,
+                  }}
+                />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    position: "absolute",
+                    bottom: 0,
+                    marginBottom: 2,
+                    color: "white",
+                    fontWeight: 300,
+                    fontFamily: "sans-serif",
+                  }}
+                >
+                  Copyright ©2024 Jacassists
+                </Typography>
+              </Box>
+            </Box>
           </SwipeableDrawer>
         </React.Fragment>
       ))}

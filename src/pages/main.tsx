@@ -5,7 +5,7 @@ const Main_Bg = require("../imgs/main_bg.jpeg");
 const Main = () => {
   const scroll = () => {
     window.scrollTo({
-      top: window.innerHeight,
+      top: window.innerHeight - 60,
       behavior: "smooth",
     });
   };
@@ -21,7 +21,7 @@ const Main = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        height: "90vh",
+        height: "99vh",
         borderBottom: "10px solid #9fc4c8",
       }}
     >

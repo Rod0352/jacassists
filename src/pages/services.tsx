@@ -161,7 +161,7 @@ const Services = () => {
           display: "flex",
           justifyContent: "space-around",
           width: "100%",
-          maxWidth: "600px",
+          maxWidth: "650px",
           mt: 4,
         }}
       >
@@ -170,8 +170,66 @@ const Services = () => {
             border: "1.2px solid white",
             borderRadius: "6px",
             // flex: 1,
-            width: "fit-content",
-            padding: "38px",
+            maxWidth: "20%",
+            width: "100%",
+            minWidth: "20%",
+            padding: "5px",
+
+            mr: 1,
+            ml: 1,
+            transition: "all 0.2s ease",
+            ":hover": {
+              boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
+              border: "1.9px solid bisque ",
+            },
+          }}
+        >
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontFamily: "Lora",
+              textDecorationLine: "underline",
+              textUnderlineOffset: "5px",
+              paddingBottom: "36px",
+            }}
+          >
+            Hourly
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="div"
+            sx={{ color: "white", textAlign: "center", fontStyle: "italic" }}
+          >
+            as needed
+          </Typography>
+          <Typography
+            variant="subtitle2"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            -
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            component="div"
+            sx={{ color: "white", textAlign: "center" }}
+          >
+            $36/hr
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            border: "1.2px solid white",
+            borderRadius: "6px",
+            // flex: 1,
+            maxWidth: "20%",
+            width: "100%",
+            minWidth: "fit-content",
+
+            padding: "5px",
 
             mr: 1,
             ml: 1,
@@ -223,8 +281,11 @@ const Services = () => {
             border: "1.2px solid white",
             borderRadius: "6px",
             // flex: 1,
-            width: "fit-content",
-            padding: "38px",
+            // width: "fit-content",
+            maxWidth: "20%",
+            width: "100%",
+            minWidth: "fit-content",
+            padding: "5px",
             mr: 1,
             ml: 1,
             transition: "all 0.2s ease",
@@ -269,6 +330,7 @@ const Services = () => {
           >
             $1320
           </Typography>
+          B
         </Box>
       </Box>
       <Typography
