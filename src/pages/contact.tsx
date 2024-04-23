@@ -178,6 +178,7 @@ const Contact = () => {
                 Jess Coleman
               </Typography>
               <Typography
+                gutterBottom
                 variant="subtitle1"
                 sx={{
                   color: "white",
@@ -185,6 +186,15 @@ const Contact = () => {
                 }}
               >
                 Founder & CEO
+              </Typography>
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  color: "white",
+                  fontFamily: "Lora",
+                }}
+              >
+                FULLY BOOKED
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -285,6 +295,7 @@ const Contact = () => {
                 Kirsten Coleman
               </Typography>
               <Typography
+                gutterBottom
                 variant="subtitle1"
                 sx={{
                   color: "white",
@@ -292,6 +303,15 @@ const Contact = () => {
                 }}
               >
                 Virtual Assistant
+              </Typography>
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  color: "white",
+                  fontFamily: "Lora",
+                }}
+              >
+                FULLY BOOKED
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -368,12 +388,22 @@ const Contact = () => {
               </Typography>
               <Typography
                 variant="subtitle1"
+                gutterBottom
                 sx={{
                   color: "white",
                   fontFamily: "Lora",
                 }}
               >
                 Virtual Assistant
+              </Typography>
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  color: "white",
+                  fontFamily: "Lora",
+                }}
+              >
+                ACCEPTING NEW CLIENTS (starting June 1st)
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -456,12 +486,22 @@ const Contact = () => {
               </Typography>
               <Typography
                 variant="subtitle1"
+                gutterBottom
                 sx={{
                   color: "white",
                   fontFamily: "Lora",
                 }}
               >
                 Virtual Assistant
+              </Typography>
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  color: "white",
+                  fontFamily: "Lora",
+                }}
+              >
+                ACCEPTING NEW CLIENTS
               </Typography>
             </CardContent>
           </CardActionArea>
