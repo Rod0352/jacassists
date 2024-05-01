@@ -1,17 +1,52 @@
-import { ArrowDownward } from "@mui/icons-material";
-import Flicking from "@egjs/react-flicking";
-import "@egjs/react-flicking/dist/flicking.css";
+import {
+  ArrowDownward,
+  JoinRight,
+  NavigateNext,
+  PointOfSale,
+  RadioButtonCheckedOutlined,
+  Star,
+} from "@mui/icons-material";
+import EmailIcon from "@mui/icons-material/Email";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import UpdateIcon from "@mui/icons-material/Update";
+import AddCardIcon from "@mui/icons-material/AddCard";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import AddchartIcon from "@mui/icons-material/Addchart";
+import CreateIcon from "@mui/icons-material/Create";
+import FolderIcon from "@mui/icons-material/Folder";
+import RememberMeIcon from "@mui/icons-material/RememberMe";
 import { Box, Button, IconButton, Paper, Typography } from "@mui/material";
 import React, { useState } from "react";
 const Service_Bg = require("../imgs/service_bg.jpeg");
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import {
+  Navigation,
+  EffectFade,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-const serviceItem = (title: string, services: string[], index: number) => {
+const ServiceItem = ({
+  title,
+  services,
+  index,
+  sx,
+}: {
+  title: string;
+  services: string[];
+  index: number;
+  sx: any;
+}) => {
   const icon = (index: number) => {
     switch (index) {
       case 0:
@@ -19,23 +54,23 @@ const serviceItem = (title: string, services: string[], index: number) => {
           <IconButton
             sx={{
               color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              backgroundColor: "green",
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <ContactMailIcon />
           </IconButton>
         );
       case 1:
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: "gray",
+              backgroundColor: "bisque",
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <AddCardIcon />
           </IconButton>
         );
       case 2:
@@ -43,23 +78,23 @@ const serviceItem = (title: string, services: string[], index: number) => {
           <IconButton
             sx={{
               color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              backgroundColor: "green",
+              alignSelf: "  center",
             }}
           >
-            <ArrowDownward />
+            <UpdateIcon />
           </IconButton>
         );
       case 3:
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: "gray",
+              backgroundColor: "bisque",
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <AddchartIcon />
           </IconButton>
         );
       case 4:
@@ -67,11 +102,11 @@ const serviceItem = (title: string, services: string[], index: number) => {
           <IconButton
             sx={{
               color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              backgroundColor: "green",
+              alignSelf: "  center",
             }}
           >
-            <ArrowDownward />
+            <RadioButtonCheckedOutlined />
           </IconButton>
         );
 
@@ -79,12 +114,12 @@ const serviceItem = (title: string, services: string[], index: number) => {
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: "gray",
+              backgroundColor: "bisque",
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <FolderIcon />
           </IconButton>
         );
     }
@@ -93,12 +128,13 @@ const serviceItem = (title: string, services: string[], index: number) => {
   return (
     <Box
       sx={{
+        ...sx,
         width: 210,
-        height: 300,
+        height: 290,
         border: "1px solid white",
         backgroundColor: "white",
         padding: 2,
-        margin: 2,
+        // margin: 2,
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
@@ -133,8 +169,6 @@ const serviceItem = (title: string, services: string[], index: number) => {
 };
 
 const Services = () => {
-  const [panels, setPanels] = useState([0, 1, 2, 3, 4]);
-
   const BuisnessServices = {
     "Client Communication & Management": [
       "Managing emails, texts & voicemails",
@@ -167,15 +201,13 @@ const Services = () => {
   };
 
   const PersonalServices = {
-    "Booking flights, hotels, etc.": [
-      "Booking flights, hotels, etc.",
-      "Travel research",
-      "Travel itinerary",
-      "Travel insurance",
+    "Travel and Accommodation Management": ["Booking flights, hotels, etc."],
+    "Financial and Administrative Tasks": ["Bill payment", "Insurance claims"],
+    "Communication and Organization": [
+      "Email management",
+      "Schedule management",
     ],
-    "Bill payment": ["Bill payment", "Budgeting", "Expense tracking"],
-    "Insurance claims": ["Insurance claims", "Filing", "Tracking"],
-    "Email management": ["Email management", "Email organization"],
+    "Personal and Miscellaneous Errands": ["Online shopping/gift ordering"],
   };
 
   const screen_size = window.innerWidth;
@@ -184,7 +216,7 @@ const Services = () => {
   return (
     <Box
       sx={{
-        flexGrow: 1,
+        // flexGrow: 1,
         position: "relative",
         display: "flex",
         flexDirection: "column",
@@ -193,6 +225,8 @@ const Services = () => {
         backgroundSize: "cover",
         backgroundPosition: "right",
         backgroundRepeat: "no-repeat",
+        overflow: "hidden",
+        // margin: 1,
         // height: "100vh",/
       }}
     >
@@ -209,8 +243,6 @@ const Services = () => {
           fontWeight: 400,
           textAlign: "center",
           color: "white",
-          // textDecorationLine: "underline",
-          // textUnderlineOffset: "5px",
         }}
       >
         Our Services
@@ -219,39 +251,38 @@ const Services = () => {
         variant="h4"
         sx={{
           color: "white",
+          width: "100%",
           fontFamily: "lora",
-          textAlign: "center",
-          m: 2,
+          textAlign: "left",
+          ml: 3,
+          mb: 3,
         }}
       >
-        Business
+        For Your Business ...
       </Typography>
-      {/* <Flicking renderOnlyVisible={true}>
-        {panels.map((index) =>
-          serviceItem(
-            Object.keys(BuisnessServices)[index],
-            Object.values(BuisnessServices)[index] as string[],
-            index
-          )
-        )}
-      </Flicking> */}
 
       <Swiper
         style={{
-          width: "100%",
+          width: "90%",
         }}
-        // spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        slidesPerView={screen_size > 600 ? 3 : 1}
+        navigation
+        pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
       >
-        {panels.map((index) => (
-          <SwiperSlide key={index}>
-            {serviceItem(
-              Object.keys(BuisnessServices)[index],
-              Object.values(BuisnessServices)[index] as string[],
-              index
-            )}
+        {Object.keys(BuisnessServices).map((service, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ServiceItem
+              title={service}
+              services={BuisnessServices[service]}
+              index={index}
+              sx={{}}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -261,15 +292,40 @@ const Services = () => {
         sx={{
           color: "white",
           fontFamily: "lora",
-          textAlign: "center",
-          m: 2,
+          textAlign: "right",
+          mt: 3,
+          mr: 3,
+          mb: 3,
+          width: "100%",
         }}
       >
-        Personal
+        ... Or Personal Needs
       </Typography>
-      {/* <Flicking renderOnlyVisible={true}>
-        {panels.map((index) => serviceItem(PersonalServices[index], index))}
-      </Flicking> */}
+      <Swiper
+        style={{
+          width: "90%",
+        }}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        slidesPerView={screen_size > 600 ? 3 : 1}
+        navigation
+        pagination={{ clickable: true }}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {Object.keys(PersonalServices).map((service, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ServiceItem
+              title={service}
+              services={PersonalServices[service]}
+              index={index}
+              sx={{}}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <Typography
         variant="h6"
         component="div"
