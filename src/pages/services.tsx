@@ -36,6 +36,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+const randomColor = () => {
+  const colors = ["#ffed25", "#f089ff", "#25cdff", "#ff8989", "#9fff89"];
+  return colors[Math.floor(Math.random() * colors.length)];
+};
+
 const ServiceItem = ({
   title,
   services,
@@ -52,9 +57,14 @@ const ServiceItem = ({
       case 0:
         return (
           <IconButton
+            disableFocusRipple
+            disableRipple
             sx={{
-              color: "white",
-              backgroundColor: "green",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
               alignSelf: "center",
             }}
           >
@@ -65,8 +75,11 @@ const ServiceItem = ({
         return (
           <IconButton
             sx={{
-              color: "gray",
-              backgroundColor: "bisque",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
               alignSelf: "center",
             }}
           >
@@ -77,9 +90,12 @@ const ServiceItem = ({
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "green",
-              alignSelf: "  center",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
             <UpdateIcon />
@@ -89,8 +105,11 @@ const ServiceItem = ({
         return (
           <IconButton
             sx={{
-              color: "gray",
-              backgroundColor: "bisque",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
               alignSelf: "center",
             }}
           >
@@ -101,9 +120,12 @@ const ServiceItem = ({
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "green",
-              alignSelf: "  center",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
             <RadioButtonCheckedOutlined />
@@ -114,8 +136,11 @@ const ServiceItem = ({
         return (
           <IconButton
             sx={{
-              color: "gray",
-              backgroundColor: "bisque",
+              color: "#ffed25",
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
               alignSelf: "center",
             }}
           >
@@ -131,14 +156,15 @@ const ServiceItem = ({
         ...sx,
         width: 210,
         height: 290,
-        border: "1px solid white",
-        backgroundColor: "white",
+        border: "2.8px solid white",
+        backgroundColor: "rgba(0,0,0,0.5)",
         padding: 2,
+        borderRadius: "9px",
         // margin: 2,
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "space-evenly",
         flexDirection: "column",
-        boxShadow: "11px 9px #b5b5b5c7",
+        // boxShadow: "11px 9px #b5b5b5c7",
       }}
       key={index}
     >
@@ -147,6 +173,7 @@ const ServiceItem = ({
         variant="subtitle1"
         sx={{
           fontWeight: 600,
+          color: "white",
           fontFamily: "lora",
           mb: 2,
         }}
@@ -158,6 +185,7 @@ const ServiceItem = ({
           variant="subtitle2"
           sx={{
             fontFamily: "lora",
+            color: "white",
           }}
           key={index}
         >
@@ -247,31 +275,47 @@ const Services = () => {
       >
         Our Services
       </Typography>
-      <Typography
-        variant="h4"
-        sx={{
-          color: "white",
-          width: "100%",
-          fontFamily: "lora",
-          textAlign: "left",
-          ml: 3,
-          mb: 3,
-        }}
-      >
-        For Your Business ...
-      </Typography>
 
       <Swiper
         style={{
           width: "90%",
+          display: "flex",
+          flexFlow: "column-reverse",
+          paddingBottom: "30px",
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={screen_size > 600 ? 3 : 1}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 3,
+          },
+        }}
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
+        <Typography
+          variant="h4"
+          sx={{
+            color: "white",
+            width: "100%",
+            fontFamily: "lora",
+            textAlign: "left",
+            ml: 3,
+            mb: 3,
+          }}
+        >
+          For Your Business ...
+        </Typography>
         {Object.keys(BuisnessServices).map((service, index) => (
           <SwiperSlide
             key={index}
@@ -287,31 +331,44 @@ const Services = () => {
         ))}
       </Swiper>
 
-      <Typography
-        variant="h4"
-        sx={{
-          color: "white",
-          fontFamily: "lora",
-          textAlign: "right",
-          mt: 3,
-          mr: 3,
-          mb: 3,
-          width: "100%",
-        }}
-      >
-        ... Or Personal Needs
-      </Typography>
       <Swiper
         style={{
           width: "90%",
+          display: "flex",
+          flexFlow: "column-reverse",
+          paddingBottom: "30px",
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={screen_size > 600 ? 3 : 1}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 3,
+          },
+        }}
         navigation
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
+        <Typography
+          variant="h4"
+          sx={{
+            color: "white",
+            fontFamily: "lora",
+            textAlign: "right",
+            mt: 3,
+            mr: 3,
+            mb: 3,
+            width: "100%",
+          }}
+        >
+          ... Or Personal Needs
+        </Typography>
         {Object.keys(PersonalServices).map((service, index) => (
           <SwiperSlide
             key={index}
