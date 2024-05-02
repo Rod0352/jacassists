@@ -416,12 +416,30 @@ const Services = () => {
       <Typography
         variant="h5"
         component="div"
-        sx={{ color: "white", fontFamily: "lora" }}
-        mt={3}
+        sx={{
+          color: "white",
+          fontFamily: "lora",
+          textDecoration: "underline",
+          textUnderlineOffset: "5px",
+        }}
+        mt={4}
       >
         Pricing
       </Typography>
-      <Box
+      <Typography
+        variant="subtitle1"
+        component="div"
+        sx={{
+          color: "white",
+          textAlign: "center",
+          fontFamily: "lora",
+          textWrap: "balance",
+        }}
+      >
+        All services are billed hourly at your choice of weekly, bi-weekly, or
+        monthly intervals
+      </Typography>
+      {/* <Box
         sx={{
           display: "flex",
           justifyContent: "space-around",
@@ -596,7 +614,7 @@ const Services = () => {
             $1320
           </Typography>
         </Box>
-      </Box>
+      </Box> */}
       <Typography
         variant="subtitle2"
         component="div"

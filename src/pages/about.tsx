@@ -56,9 +56,7 @@ const About = () => {
               textAlign: "center",
               fontWeight: 300,
             }}
-          >
-            ~ In A Nutshell ~
-          </Typography>
+          ></Typography>
 
           <Typography
             variant="subtitle1"
