@@ -2,6 +2,7 @@ import {
   ArrowDownward,
   JoinRight,
   NavigateNext,
+  Person2,
   PointOfSale,
   RadioButtonCheckedOutlined,
   Star,
@@ -83,7 +84,7 @@ const ServiceItem = ({
               alignSelf: "center",
             }}
           >
-            <AddCardIcon />
+            <Person2 />
           </IconButton>
         );
       case 2:
@@ -165,31 +166,40 @@ const ServiceItem = ({
         justifyContent: "space-evenly",
         flexDirection: "column",
         // boxShadow: "11px 9px #b5b5b5c7",
+        overflowY: "auto",
+        // msScrollbarTrackColor: "transparent",
+        // invisible scroll bar
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
       }}
       key={index}
     >
       {icon(index)}
       <Typography
-        variant="subtitle1"
+        variant="h6"
         sx={{
           fontWeight: 600,
           color: "white",
           fontFamily: "lora",
           mb: 2,
+          position: "sticky",
+          textAlign: "center",
         }}
       >
         {title}
       </Typography>
       {services.map((service, index) => (
         <Typography
-          variant="subtitle2"
+          variant="subtitle1"
           sx={{
-            fontFamily: "lora",
+            // fontFamily: "lora",
+            lineHeight: 1.2,
             color: "white",
           }}
           key={index}
         >
-          {service}
+          - {service}
         </Typography>
       ))}
     </Box>
@@ -198,44 +208,37 @@ const ServiceItem = ({
 
 const Services = () => {
   const BuisnessServices = {
-    "Client Communication & Management": [
+    "Administrative Support": [
       "Managing emails, texts & voicemails",
       "Responding to and tracking new client inquiries/referrals",
-      "Updating client EHRs",
-      "Processing client payments, generating superbills",
-    ],
-    "Practice Operations": [
-      "Clinician and practice schedule management",
       "Office management (paying bills, payroll, etc.)",
       "Onboarding/Offboarding",
     ],
-    "System And Data Organization": [
+    "Client Management": [
+      "Updating client EHRs",
+      "Processing client payments, generating Superbills",
+      "Clinician and practice schedule management",
+    ],
+    "Organization and Data Management": [
       "Organizing current systems, spreadsheets, tracking",
       "Transcribing audio notes",
-      "Assisting with research",
     ],
-    "Marketing and Outreach": [
+    "Communication and Marketing": [
       "Creating, scheduling and managing social media posts",
       "Canva projects",
     ],
-    "Administrative Support": [
-      "Managing emails, texts & voicemails",
-      "Office management (paying bills, payroll, etc.)",
-      "Organizing current systems, spreadsheets, tracking",
-      "Transcribing audio notes",
+    "Research and Assistance": [
       "Assisting with research",
-      "Onboarding/Offboarding",
+      "Researching new tools",
     ],
   };
 
   const PersonalServices = {
-    "Travel and Accommodation Management": ["Booking flights, hotels, etc."],
-    "Financial and Administrative Tasks": ["Bill payment", "Insurance claims"],
-    "Communication and Organization": [
-      "Email management",
-      "Schedule management",
-    ],
-    "Personal and Miscellaneous Errands": ["Online shopping/gift ordering"],
+    "Travel and Accommodation": ["Booking flights, hotels, etc."],
+    "Personal Assistance": ["Online shopping/gift ordering"],
+    "Communication Management": ["Email management"],
+    "Financial Management": ["Bill payment", "Insurance claims"],
+    "Schedule Management": ["Schedule management"],
   };
 
   const screen_size = window.innerWidth;
@@ -384,7 +387,34 @@ const Services = () => {
         ))}
       </Swiper>
       <Typography
+        variant="h4"
+        component="div"
+        sx={{
+          color: "white",
+          fontFamily: "lora",
+          textAlign: "center",
+          mt: 3,
+          mb: 1,
+        }}
+      >
+        Coming Soon ...
+      </Typography>
+      <Typography
         variant="h6"
+        component="div"
+        sx={{
+          color: "white",
+          fontFamily: "lora",
+          textAlign: "center",
+          mt: 1,
+          mb: 2,
+        }}
+      >
+        Insurance Credentialing ( this will be a separate, project based service
+        with its own separate cost! )
+      </Typography>
+      <Typography
+        variant="h5"
         component="div"
         sx={{ color: "white", fontFamily: "lora" }}
         mt={3}
