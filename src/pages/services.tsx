@@ -429,6 +429,7 @@ const Services = () => {
       <Typography
         variant="subtitle1"
         component="div"
+        mt={2}
         sx={{
           color: "white",
           textAlign: "center",
@@ -436,8 +437,8 @@ const Services = () => {
           textWrap: "balance",
         }}
       >
-        All services are billed hourly at your choice of weekly, bi-weekly, or
-        monthly intervals
+        All services are billed $36 hourly at your choice of weekly, bi-weekly,
+        or monthly intervals
       </Typography>
       {/* <Box
         sx={{
@@ -615,7 +616,7 @@ const Services = () => {
           </Typography>
         </Box>
       </Box> */}
-      <Typography
+      {/* <Typography
         variant="subtitle2"
         component="div"
         sx={{ color: "white", textAlign: "center", mt: 2 }}
@@ -635,7 +636,7 @@ const Services = () => {
       >
         * Packages can be paid on the first of the month or broken up into two
         monthly payments
-      </Typography>
+      </Typography> */}
       <Button
         variant="contained"
         size="small"
