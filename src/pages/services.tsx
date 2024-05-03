@@ -238,7 +238,7 @@ const Services = () => {
     "Personal Assistance": ["Online shopping/gift ordering"],
     "Communication Management": ["Email management"],
     "Financial Management": ["Bill payment", "Insurance claims"],
-    "Schedule Management": ["Schedule management"],
+    Scheduling: ["Schedule management"],
   };
 
   const screen_size = window.innerWidth;
