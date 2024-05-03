@@ -1,77 +1,135 @@
-import { ArrowDownward } from "@mui/icons-material";
-import Flicking from "@egjs/react-flicking";
-import "@egjs/react-flicking/dist/flicking.css";
+import {
+  ArrowDownward,
+  JoinRight,
+  NavigateNext,
+  Person2,
+  PointOfSale,
+  RadioButtonCheckedOutlined,
+  Star,
+} from "@mui/icons-material";
+import EmailIcon from "@mui/icons-material/Email";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import UpdateIcon from "@mui/icons-material/Update";
+import AddCardIcon from "@mui/icons-material/AddCard";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import AddchartIcon from "@mui/icons-material/Addchart";
+import CreateIcon from "@mui/icons-material/Create";
+import FolderIcon from "@mui/icons-material/Folder";
+import RememberMeIcon from "@mui/icons-material/RememberMe";
 import { Box, Button, IconButton, Paper, Typography } from "@mui/material";
 import React, { useState } from "react";
 const Service_Bg = require("../imgs/service_bg.jpeg");
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import {
+  Navigation,
+  EffectFade,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-const serviceItem = (title: string, services: string[], index: number) => {
+const randomColor = () => {
+  const colors = ["#ffed25", "#f089ff", "#25cdff", "#ff8989", "#9fff89"];
+  return colors[Math.floor(Math.random() * colors.length)];
+};
+
+const ServiceItem = ({
+  title,
+  services,
+  index,
+  sx,
+}: {
+  title: string;
+  services: string[];
+  index: number;
+  sx: any;
+}) => {
   const icon = (index: number) => {
     switch (index) {
       case 0:
         return (
           <IconButton
+            disableFocusRipple
+            disableRipple
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <ContactMailIcon />
           </IconButton>
         );
       case 1:
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <Person2 />
           </IconButton>
         );
       case 2:
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <UpdateIcon />
           </IconButton>
         );
       case 3:
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <AddchartIcon />
           </IconButton>
         );
       case 4:
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: randomColor(),
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <RadioButtonCheckedOutlined />
           </IconButton>
         );
 
@@ -79,12 +137,15 @@ const serviceItem = (title: string, services: string[], index: number) => {
         return (
           <IconButton
             sx={{
-              color: "white",
-              backgroundColor: "#50413c",
-              alignSelf: "flex-end",
+              color: "#ffed25",
+              // backgroundColor: "green",
+              borderRadius: "50%",
+              border: "2.8px solid white",
+              padding: 2,
+              alignSelf: "center",
             }}
           >
-            <ArrowDownward />
+            <FolderIcon />
           </IconButton>
         );
     }
@@ -93,39 +154,52 @@ const serviceItem = (title: string, services: string[], index: number) => {
   return (
     <Box
       sx={{
+        ...sx,
         width: 210,
-        height: 300,
-        border: "1px solid white",
-        backgroundColor: "white",
+        height: 290,
+        border: "2.8px solid white",
+        backgroundColor: "rgba(0,0,0,0.5)",
         padding: 2,
-        margin: 2,
+        borderRadius: "9px",
+        // margin: 2,
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "space-evenly",
         flexDirection: "column",
-        boxShadow: "11px 9px #b5b5b5c7",
+        // boxShadow: "11px 9px #b5b5b5c7",
+        overflowY: "auto",
+        // msScrollbarTrackColor: "transparent",
+        // invisible scroll bar
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
       }}
       key={index}
     >
       {icon(index)}
       <Typography
-        variant="subtitle1"
+        variant="h6"
         sx={{
           fontWeight: 600,
+          color: "white",
           fontFamily: "lora",
           mb: 2,
+          position: "sticky",
+          textAlign: "center",
         }}
       >
         {title}
       </Typography>
       {services.map((service, index) => (
         <Typography
-          variant="subtitle2"
+          variant="subtitle1"
           sx={{
-            fontFamily: "lora",
+            // fontFamily: "lora",
+            lineHeight: 1.2,
+            color: "white",
           }}
           key={index}
         >
-          {service}
+          - {service}
         </Typography>
       ))}
     </Box>
@@ -133,49 +207,38 @@ const serviceItem = (title: string, services: string[], index: number) => {
 };
 
 const Services = () => {
-  const [panels, setPanels] = useState([0, 1, 2, 3, 4]);
-
   const BuisnessServices = {
-    "Client Communication & Management": [
+    "Administrative Support": [
       "Managing emails, texts & voicemails",
       "Responding to and tracking new client inquiries/referrals",
-      "Updating client EHRs",
-      "Processing client payments, generating superbills",
-    ],
-    "Practice Operations": [
-      "Clinician and practice schedule management",
       "Office management (paying bills, payroll, etc.)",
       "Onboarding/Offboarding",
     ],
-    "System And Data Organization": [
+    "Client Management": [
+      "Updating client EHRs",
+      "Processing client payments, generating Superbills",
+      "Clinician and practice schedule management",
+    ],
+    "Organization and Data Management": [
       "Organizing current systems, spreadsheets, tracking",
       "Transcribing audio notes",
-      "Assisting with research",
     ],
-    "Marketing and Outreach": [
+    "Communication and Marketing": [
       "Creating, scheduling and managing social media posts",
       "Canva projects",
     ],
-    "Administrative Support": [
-      "Managing emails, texts & voicemails",
-      "Office management (paying bills, payroll, etc.)",
-      "Organizing current systems, spreadsheets, tracking",
-      "Transcribing audio notes",
+    "Research and Assistance": [
       "Assisting with research",
-      "Onboarding/Offboarding",
+      "Researching new tools",
     ],
   };
 
   const PersonalServices = {
-    "Booking flights, hotels, etc.": [
-      "Booking flights, hotels, etc.",
-      "Travel research",
-      "Travel itinerary",
-      "Travel insurance",
-    ],
-    "Bill payment": ["Bill payment", "Budgeting", "Expense tracking"],
-    "Insurance claims": ["Insurance claims", "Filing", "Tracking"],
-    "Email management": ["Email management", "Email organization"],
+    "Travel and Accommodation": ["Booking flights, hotels, etc."],
+    "Personal Assistance": ["Online shopping/gift ordering"],
+    "Communication Management": ["Email management"],
+    "Financial Management": ["Bill payment", "Insurance claims"],
+    Scheduling: ["Schedule management"],
   };
 
   const screen_size = window.innerWidth;
@@ -184,7 +247,7 @@ const Services = () => {
   return (
     <Box
       sx={{
-        flexGrow: 1,
+        // flexGrow: 1,
         position: "relative",
         display: "flex",
         flexDirection: "column",
@@ -193,6 +256,8 @@ const Services = () => {
         backgroundSize: "cover",
         backgroundPosition: "right",
         backgroundRepeat: "no-repeat",
+        overflow: "hidden",
+        // margin: 1,
         // height: "100vh",/
       }}
     >
@@ -209,76 +274,173 @@ const Services = () => {
           fontWeight: 400,
           textAlign: "center",
           color: "white",
-          // textDecorationLine: "underline",
-          // textUnderlineOffset: "5px",
         }}
       >
         Our Services
       </Typography>
-      <Typography
-        variant="h4"
-        sx={{
-          color: "white",
-          fontFamily: "lora",
-          textAlign: "center",
-          m: 2,
-        }}
-      >
-        Business
-      </Typography>
-      {/* <Flicking renderOnlyVisible={true}>
-        {panels.map((index) =>
-          serviceItem(
-            Object.keys(BuisnessServices)[index],
-            Object.values(BuisnessServices)[index] as string[],
-            index
-          )
-        )}
-      </Flicking> */}
 
       <Swiper
         style={{
-          width: "100%",
+          width: "90%",
+          display: "flex",
+          flexFlow: "column-reverse",
+          paddingBottom: "30px",
         }}
-        // spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 3,
+          },
+        }}
+        navigation
+        pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
       >
-        {panels.map((index) => (
-          <SwiperSlide key={index}>
-            {serviceItem(
-              Object.keys(BuisnessServices)[index],
-              Object.values(BuisnessServices)[index] as string[],
-              index
-            )}
+        <Typography
+          variant="h4"
+          sx={{
+            color: "white",
+            width: "100%",
+            fontFamily: "lora",
+            textAlign: "left",
+            ml: 3,
+            mb: 3,
+          }}
+        >
+          For Your Business ...
+        </Typography>
+        {Object.keys(BuisnessServices).map((service, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ServiceItem
+              title={service}
+              services={BuisnessServices[service]}
+              index={index}
+              sx={{}}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
 
+      <Swiper
+        style={{
+          width: "90%",
+          display: "flex",
+          flexFlow: "column-reverse",
+          paddingBottom: "30px",
+        }}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 3,
+          },
+        }}
+        navigation
+        pagination={{ clickable: true }}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            color: "white",
+            fontFamily: "lora",
+            textAlign: "right",
+            mt: 3,
+            mr: 3,
+            mb: 3,
+            width: "100%",
+          }}
+        >
+          ... Or Personal Needs
+        </Typography>
+        {Object.keys(PersonalServices).map((service, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ServiceItem
+              title={service}
+              services={PersonalServices[service]}
+              index={index}
+              sx={{}}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <Typography
         variant="h4"
+        component="div"
         sx={{
           color: "white",
           fontFamily: "lora",
           textAlign: "center",
-          m: 2,
+          mt: 3,
+          mb: 1,
         }}
       >
-        Personal
+        Coming Soon ...
       </Typography>
-      {/* <Flicking renderOnlyVisible={true}>
-        {panels.map((index) => serviceItem(PersonalServices[index], index))}
-      </Flicking> */}
       <Typography
         variant="h6"
         component="div"
-        sx={{ color: "white", fontFamily: "lora" }}
-        mt={3}
+        sx={{
+          color: "white",
+          fontFamily: "lora",
+          textAlign: "center",
+          mt: 1,
+          mb: 2,
+        }}
+      >
+        Insurance Credentialing ( this will be a separate, project based service
+        with its own separate cost! )
+      </Typography>
+      <Typography
+        variant="h5"
+        component="div"
+        sx={{
+          color: "white",
+          fontFamily: "lora",
+          textDecoration: "underline",
+          textUnderlineOffset: "5px",
+        }}
+        mt={4}
       >
         Pricing
       </Typography>
-      <Box
+      <Typography
+        variant="subtitle1"
+        component="div"
+        mt={2}
+        sx={{
+          color: "white",
+          textAlign: "center",
+          fontFamily: "lora",
+          textWrap: "balance",
+        }}
+      >
+        All services are billed $36 hourly at your choice of weekly, bi-weekly,
+        or monthly intervals
+      </Typography>
+      {/* <Box
         sx={{
           display: "flex",
           justifyContent: "space-around",
@@ -453,8 +615,8 @@ const Services = () => {
             $1320
           </Typography>
         </Box>
-      </Box>
-      <Typography
+      </Box> */}
+      {/* <Typography
         variant="subtitle2"
         component="div"
         sx={{ color: "white", textAlign: "center", mt: 2 }}
@@ -474,7 +636,7 @@ const Services = () => {
       >
         * Packages can be paid on the first of the month or broken up into two
         monthly payments
-      </Typography>
+      </Typography> */}
       <Button
         variant="contained"
         size="small"
