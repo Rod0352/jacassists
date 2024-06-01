@@ -403,7 +403,7 @@ const Contact = () => {
                   fontFamily: "Lora",
                 }}
               >
-                ACCEPTING NEW CLIENTS (starting June 1st)
+                ACCEPTING NEW CLIENTS
               </Typography>
             </CardContent>
           </CardActionArea>
