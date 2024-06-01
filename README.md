@@ -1,6 +1,9 @@
 # Jaccassists
 
-npm run build 
-  this will build and allocate build in the /dist folder 
-npm run start
-  starts the app in local
+For local development 
+ - npm install
+ - npm start 
+
+For production deployment 
+ - npm run build
+ - commit and push changes to main
