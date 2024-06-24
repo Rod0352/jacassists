@@ -267,7 +267,7 @@ const Contact = () => {
             </CardContent>
           </Collapse>
         </Card>
-        <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
+        {/* <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
           <CardActionArea>
             <CardMedia
               loading="lazy"
@@ -337,7 +337,7 @@ const Contact = () => {
                 }}
               >
                 {/* Meet Kirsten (AKA, “K”): */}
-                Meet Kirsten{" "}
+                {/* Meet Kirsten{" "}
                 <span style={{ color: "white", fontSize: ".9rem" }}>
                   (AKA, “K”) :
                 </span>
@@ -358,7 +358,7 @@ const Contact = () => {
               </Typography>
             </CardContent>
           </Collapse>
-        </Card>
+        </Card> */} 
         <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
           <CardActionArea>
             <CardMedia
