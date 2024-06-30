@@ -17,10 +17,17 @@ import {
 import React, { useEffect } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 const Portrait = require("../imgs/jess_main.jpeg");
-const Portrait2 = require("../imgs/kirsten_new.jpeg");
 const Portrait3 = require("../imgs/sarah_main.jpeg");
 const Portrait4 = require("../imgs/josie.jpeg");
 const bg = require("../imgs/contact_bg.jpeg");
+const insta_64 = require("../imgs/in_64.png");
+const insta_128 = require("../imgs/in_128.png");
+const fb_64 = require("../imgs/fb_64.png");
+const fb_128 = require("../imgs/fb_128.png");
+const linked_64 = require("../imgs/linked_64.png");
+const linked_128 = require("../imgs/linked_128.png");
+import Link from "@mui/material/Link";
+
 const BG_GRAY =
   "linear-gradient(0deg, rgba(255,152,121,0.8407738095238095) 48%, rgba(255,199,121,0.4430147058823529) 92%);";
 interface ExpandMoreProps extends IconButtonProps {
@@ -44,6 +51,19 @@ const Contact = () => {
   };
   const handle_phone_click = () => {
     window.location.href = "tel: 330-203-1505";
+  };
+
+  const handle_social = (social: number) => {
+    if (social === 1) {
+      window.location.href =
+        " https://www.linkedin.com/company/jac-virtual-assistants-llc";
+    }
+    if (social === 2) {
+      window.location.href = "https://www.instagram.com/jacvirtualassistants/";
+    }
+    if (social === 3) {
+      window.location.href = "https://www.facebook.com/jacvirtualassistants/";
+    }
   };
 
   const handle_top_click = () => {
@@ -267,98 +287,7 @@ const Contact = () => {
             </CardContent>
           </Collapse>
         </Card>
-        {/* <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
-          <CardActionArea>
-            <CardMedia
-              loading="lazy"
-              component="img"
-              height="175"
-              image={Portrait2}
-              alt="Kirsten Coleman"
-            />
-            <CardContent
-              sx={{
-                backgroundColor: "transparent",
-                p: "10px",
-              }}
-            >
-              <Typography
-                gutterBottom
-                variant="h5"
-                component="div"
-                sx={{
-                  color: "white",
-                  fontWeight: 500,
-                  fontFamily: "Lora",
-                }}
-              >
-                Kirsten Coleman
-              </Typography>
-              <Typography
-                gutterBottom
-                variant="subtitle1"
-                sx={{
-                  color: "white",
-                  fontFamily: "Lora",
-                }}
-              >
-                Virtual Assistant
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                sx={{
-                  color: "white",
-                  fontFamily: "Lora",
-                }}
-              >
-                FULLY BOOKED
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions disableSpacing>
-            <ExpandMore
-              sx={{
-                padding: "0px",
-                color: "white",
-              }}
-              expand={expanded2}
-              onClick={handleExpandClick2}
-              aria-expanded={expanded2}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </ExpandMore>
-          </CardActions>
-          <Collapse in={expanded2} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography
-                sx={{
-                  color: "white",
-                }}
-              >
-                {/* Meet Kirsten (AKA, “K”): */}
-                {/* Meet Kirsten{" "}
-                <span style={{ color: "white", fontSize: ".9rem" }}>
-                  (AKA, “K”) :
-                </span>
-              </Typography>
-              <Typography
-                sx={{
-                  color: "white",
-                }}
-              >
-                As a creative mind, K earned a Bachelor Fine Art in Interior
-                Design, from The Columbus College of Art & Design. When she's
-                not saving pups, being creative, or staying active, She’s Jess's
-                right-hand woman at JAC Virtual Assistants LLC. She’s highly
-                organized, HIPAA certified, Theranest and TherapyNotes trained,
-                skilled in Canva, loves a good spreadsheet, and stays ready to
-                tackle any challenge. If you need someone to take the lead on
-                the organization in your life, K is the right fit for you.
-              </Typography>
-            </CardContent>
-          </Collapse>
-        </Card> */} 
+
         <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
           <CardActionArea>
             <CardMedia
@@ -564,7 +493,7 @@ const Contact = () => {
           width: "fit-content",
           margin: "auto",
           boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38)",
-          mb: 5,
+          mb: 2,
           backgroundColor: "rgba(40,30,32,0.6)",
         }}
       >
@@ -587,9 +516,66 @@ const Contact = () => {
           }}
           onClick={handle_email_click}
         >
-          jacoleman@jacassists.com
+          info@jacassists.com{" "}
         </Typography>
       </Box>
+      {/* Social Media */}
+      <Box
+        sx={{
+          // margin : "5px 10px 5px 10px",
+          display: "flex",
+          justifyContent: "space-around",
+          flexDirection: "row",
+          maxWidth: "70%",
+          margin: "auto",
+          mb: 1,
+        }}
+      >
+        <Button onClick={() => handle_social(1)}>
+          <Box
+            sx={{
+              backgroundImage: `url(${
+                screen_size < 600 ? linked_64 : linked_128
+              })`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              width: 50,
+              height: 50,
+              margin: screen_size < 600 ? 1 : 4,
+            }}
+          ></Box>
+        </Button>
+        <Button onClick={() => handle_social(3)}>
+          <Box
+            sx={{
+              backgroundImage: `url(${screen_size < 600 ? fb_64 : fb_128})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              width: 50,
+              height: 50,
+              margin: screen_size < 600 ? 1 : 4,
+            }}
+          ></Box>
+        </Button>
+        <Button onClick={() => handle_social(2)}>
+          <Box
+            sx={{
+              backgroundImage: `url(${
+                screen_size < 600 ? insta_64 : insta_128
+              })`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              width: 50,
+              height: 50,
+              margin: screen_size < 600 ? 1 : 4,
+            }}
+          ></Box>
+        </Button>
+      </Box>
+
       <Box
         sx={{
           // width: "100%",
