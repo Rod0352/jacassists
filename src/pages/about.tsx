@@ -1,4 +1,3 @@
-import { ArrowDownward } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 const About_Bg = require("../imgs/about_bg.jpeg");

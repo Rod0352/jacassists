@@ -19,6 +19,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 const Portrait = require("../imgs/jess_main.jpeg");
 const Portrait3 = require("../imgs/sarah_main.jpeg");
 const Portrait4 = require("../imgs/josie.jpeg");
+const Portrait5 = require("../imgs/meg.jpg");
 const bg = require("../imgs/contact_bg.jpeg");
 const insta_64 = require("../imgs/in_64.png");
 const insta_128 = require("../imgs/in_128.png");
@@ -26,7 +27,6 @@ const fb_64 = require("../imgs/fb_64.png");
 const fb_128 = require("../imgs/fb_128.png");
 const linked_64 = require("../imgs/linked_64.png");
 const linked_128 = require("../imgs/linked_128.png");
-import Link from "@mui/material/Link";
 
 const BG_GRAY =
   "linear-gradient(0deg, rgba(255,152,121,0.8407738095238095) 48%, rgba(255,199,121,0.4430147058823529) 92%);";
@@ -77,6 +77,7 @@ const Contact = () => {
   const [expanded2, setExpanded2] = React.useState(false);
   const [expanded3, setExpanded3] = React.useState(false);
   const [expanded4, setExpanded4] = React.useState(false);
+  const [expanded5, setExpanded5] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -93,13 +94,18 @@ const Contact = () => {
   const handleExpandClick4 = () => {
     setExpanded4(!expanded4);
   };
+
+  const handleExpandClick5 = () => {
+    setExpanded5(!expanded5);
+  };
   // listen for click outside of card to close
   const handleClickOutside = (event: any) => {
-    if (event.target.id !== "card") {
+    if (event.target.id !== "card" || event.target.id !== "icon") {
       setExpanded(false);
       setExpanded2(false);
       setExpanded3(false);
       setExpanded4(false);
+      setExpanded5(false);
     }
   };
 
@@ -136,7 +142,6 @@ const Contact = () => {
           fontFamily: "Lora",
           width: "100%",
           textAlign: "center",
-          // textDecorationLine: "underline",
           textUnderlineOffset: "5px",
           mt: 5,
           mb: 2,
@@ -151,9 +156,7 @@ const Contact = () => {
           fontFamily: "Lora",
           width: "100%",
           textAlign: "center",
-          // textDecorationLine: "underline",
           textUnderlineOffset: "5px",
-          // mt: 5,
           mb: 7,
         }}
         variant="h5"
@@ -295,7 +298,7 @@ const Contact = () => {
               component="img"
               height="175"
               image={Portrait3}
-              alt="Kirsten Coleman"
+              alt="Sarah Smarr"
             />
             <CardContent
               sx={{
@@ -332,7 +335,7 @@ const Contact = () => {
                   fontFamily: "Lora",
                 }}
               >
-                ACCEPTING NEW CLIENTS
+                FULLY BOOKED
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -343,7 +346,7 @@ const Contact = () => {
                 color: "white",
               }}
               expand={expanded3}
-              onClick={() => setExpanded3(!expanded3)}
+              onClick={handleExpandClick3}
               aria-expanded={expanded3}
               aria-label="show more"
             >
@@ -393,7 +396,7 @@ const Contact = () => {
               component="img"
               height="175"
               image={Portrait4}
-              alt="Kirsten Coleman"
+              alt="Josie"
             />
             <CardContent
               sx={{
@@ -480,6 +483,98 @@ const Contact = () => {
             </CardContent>
           </Collapse>
         </Card>
+        <Card sx={{ width: 345, background: BG_GRAY, mb: 7, ml: 1 }}>
+          <CardActionArea>
+            <CardMedia
+              loading="lazy"
+              component="img"
+              height="175"
+              image={Portrait5}
+              alt="Josie"
+            />
+            <CardContent
+              sx={{
+                backgroundColor: "transparent",
+                p: "10px",
+              }}
+            >
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{
+                  color: "white",
+                  fontWeight: 500,
+                  fontFamily: "Lora",
+                }}
+              >
+                Meghan
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                sx={{
+                  color: "white",
+                  fontFamily: "Lora",
+                }}
+              >
+                Virtual Assistant
+              </Typography>
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  color: "white",
+                  fontFamily: "Lora",
+                }}
+              >
+                ACCEPTING NEW CLIENTS
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions disableSpacing>
+            <ExpandMore
+              sx={{
+                padding: "0px",
+                color: "white",
+              }}
+              expand={expanded5}
+              onClick={handleExpandClick5}
+              aria-expanded={expanded5}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </ExpandMore>
+          </CardActions>
+          <Collapse in={expanded5} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography
+                sx={{
+                  color: "white",
+                }}
+              >
+                Meet Meghan:{" "}
+              </Typography>
+              <Typography
+                sx={{
+                  color: "white",
+                }}
+              >
+                With a Bachelor of Science and over four years of experience in
+                event planning, Meghan brings a wealth of knowledge in sales,
+                client relations, organization and coordination to our team. Her
+                expertise in creating seamless and memorable events is
+                complemented by her background in social media marketing, making
+                her a versatile asset in our fast-paced environment.
+                <br></br> <br></br>
+                Outside of work, Meghan is a dedicated mom to two energetic
+                boys. She excels at balancing her professional life with family
+                commitments, bringing a unique perspective to everything she
+                does. We’re excited to have Meghan on board and can’t wait to
+                see the amazing contributions she’ll make!
+              </Typography>
+            </CardContent>
+          </Collapse>
+        </Card>
       </Box>
       <Box
         sx={{
@@ -519,10 +614,8 @@ const Contact = () => {
           info@jacassists.com{" "}
         </Typography>
       </Box>
-      {/* Social Media */}
       <Box
         sx={{
-          // margin : "5px 10px 5px 10px",
           display: "flex",
           justifyContent: "space-around",
           flexDirection: "row",
@@ -578,7 +671,6 @@ const Contact = () => {
 
       <Box
         sx={{
-          // width: "100%",
           backgroundColor: "rgba(40,30,32,0.6)",
           margin: "auto",
           display: "flex",
@@ -696,7 +788,6 @@ const Contact = () => {
           fontFamily: "Lora",
           width: "100%",
           textAlign: "center",
-          // textDecorationLine: "underline",
           textUnderlineOffset: "5px",
           mt: 5,
           mb: 2,
@@ -712,7 +803,6 @@ const Contact = () => {
           backgroundColor: "transparent",
           opacity: 0.8,
           right: 0,
-          // position: "absolute",
           marginTop: "10px",
           borderRadius: "10%",
           alignSelf: "flex-end",
@@ -738,8 +828,6 @@ const Contact = () => {
           alignItems: "center",
           width: "100%",
           backgroundColor: "rgba(40,30,32,0.6)",
-          // borderTop: "1.1px solid white",
-          // borderBottom: "1.1px solid white",
           mt: 5,
           mb: 0,
           // p: 1,
@@ -750,7 +838,6 @@ const Contact = () => {
           sx={{
             color: "white",
             textAlign: "center",
-            // mb: 1,
           }}
         >
           Made with{" "}
@@ -763,7 +850,6 @@ const Contact = () => {
               ml: "1.2px",
               mb: "-0.2rem",
             }}
-            //  mt: 1
           />{" "}
           by{" "}
           <a

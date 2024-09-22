@@ -107,7 +107,7 @@ const ServiceItem = ({
           <IconButton
             sx={{
               color: randomColor(),
-              // backgroundColor: "green",
+              backgroundColor: "green",
               borderRadius: "50%",
               border: "2.8px solid white",
               padding: 2,
@@ -122,7 +122,7 @@ const ServiceItem = ({
           <IconButton
             sx={{
               color: randomColor(),
-              // backgroundColor: "green",
+              backgroundColor: "green",
               borderRadius: "50%",
               border: "2.8px solid white",
               padding: 2,
@@ -160,17 +160,16 @@ const ServiceItem = ({
         border: "2.8px solid white",
         backgroundColor: "rgba(0,0,0,0.5)",
         padding: 2,
-        borderRadius: "9px",
+        borderRadius: "0px",
         // margin: 2,
         display: "flex",
         justifyContent: "space-evenly",
         flexDirection: "column",
-        // boxShadow: "11px 9px #b5b5b5c7",
+        boxShadow: "11px 9px #b5b5b5c7",
         overflowY: "auto",
-        // msScrollbarTrackColor: "transparent",
-        // invisible scroll bar
         "&::-webkit-scrollbar": {
           display: "none",
+          
         },
       }}
       key={index}

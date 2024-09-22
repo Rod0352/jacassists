@@ -35,7 +35,7 @@ export default function SwipeableTemporaryDrawer() {
 
   const list = (anchor: Anchor) => (
     <Box
-      sx={{ width: 250 }}
+      sx={{  }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -53,6 +53,7 @@ export default function SwipeableTemporaryDrawer() {
                 display: "flex",
                 justifyContent: "space-between",
                 borderTop: "1px solid white",
+                width: "100%",
                 // ":hover": {
                 boxShadow: "-5px 3px 23px -2px rgba(0,0,0,0.12) inset",
                 //   border: "1.9px solid bisque ",
@@ -87,26 +88,11 @@ export default function SwipeableTemporaryDrawer() {
                       })
               }
             >
-              {/* <ListItemIcon
-                sx={{
-                  color: "white",
-                }}
-              >
-                {index === 0 ? (
-                  <InfoIcon />
-                ) : index === 1 ? (
-                  <DesignServicesIcon />
-                ) : (
-                  <ContactPhoneIcon />
-                )}
-              </ListItemIcon> */}
               <Typography
-                // primary={text}
                 variant="h4"
                 sx={{
                   fontFamily: "'lora', serif", // on hover underline
                   "&:hover": {
-                    // textDecoration: "underline",
                   },
                 }}
               >
@@ -136,9 +122,8 @@ export default function SwipeableTemporaryDrawer() {
           </Button>
           <SwipeableDrawer
             sx={{
+              maxWidth: 300,
               "& .MuiDrawer-paper": {
-                // boxSizing: "border-box",
-                // width: "40vw",
                 overflowX: "hidden",
                 backgroundColor: "#5d5353b5",
                 color: "white",
@@ -152,27 +137,26 @@ export default function SwipeableTemporaryDrawer() {
             {list("right")}
             <Box
               sx={{
-                // border: "1px solid red",
                 width: "99.8%",
                 height: "99.8%",
                 display: "flex",
                 flexDirection: "column",
-                // alignItems: "center",
                 justifyContent: "center",
               }}
             >
               <Box
                 sx={{
                   width: "100%",
-                  height: "30%",
-                  // borderRadius: "50%",
-                  // backgroundColor: "white",
-                  opacity: 1,
+                  height: "50%",
+                  opacity: .89,
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
+                  backgroundColor: "#ffffff9e",
+                  maxWidth: "100%",
+                  // rotate: "225deg",
+                  overflow: "hidden",
                   alignItems: "center",
-                  // boxShadow: "10px 10px 79px -1px rgba(0,0,0,0.38) inset",
                 }}
               >
                 <img
@@ -181,9 +165,11 @@ export default function SwipeableTemporaryDrawer() {
                   style={{
                     height: "50%",
                     color: " white ",
-                    marginLeft: 1.5,
+                    // marginLeft: 1.5,
+                    // rotate: "135deg",
                   }}
                 />
+                  </Box>
                 <Typography
                   variant="body2"
                   sx={{
@@ -193,11 +179,12 @@ export default function SwipeableTemporaryDrawer() {
                     color: "white",
                     fontWeight: 300,
                     fontFamily: "sans-serif",
+                    width : "100%",
+                    textAlign : "center"
                   }}
                 >
-                  Copyright ©2024 Jacassists
+                  Copyright © 2024 Jacassists
                 </Typography>
-              </Box>
             </Box>
           </SwipeableDrawer>
         </React.Fragment>

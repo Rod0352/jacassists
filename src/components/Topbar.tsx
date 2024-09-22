@@ -1,7 +1,5 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { green, yellow } from "@mui/material/colors";
-import { Button, Typography } from "@mui/material";
 import SwipeableTemporaryDrawer from "./Drawer";
 const TopBarLogo = require("../imgs/topbar_logo.png");
 
@@ -34,7 +32,7 @@ function TopBar() {
     <Box
       sx={{
         // flexGrow: 1,
-        backgroundColor: "bisque",
+        backgroundColor: "white",
         p: 1,
         position: "fixed",
         zIndex: 100,
@@ -61,51 +59,6 @@ function TopBar() {
         }}
       >
         <SwipeableTemporaryDrawer />
-        {/* <Button
-          onClick={scroll}
-          sx={{
-            color: "white",
-            marginRight: 1.5,
-            fontWeight: 500,
-            transition: "all 0.2s ease",
-            display: "flex",
-            ":hover": {
-              backgroundColor: "rgba(0,0,0,0)",
-              textDecorationLine: "underline",
-            },
-          }}
-        >
-          About
-        </Button>
-        <Button
-          onClick={scroll_to_About}
-          sx={{
-            color: "white",
-            marginRight: 1.5,
-            fontWeight: 500,
-            display: "flex",
-            ":hover": {
-              backgroundColor: "rgba(0,0,0,0)",
-              textDecorationLine: "underline",
-            },
-          }}
-        >
-          Services
-        </Button>
-        <Button
-          onClick={scroll_all_the_way_down}
-          sx={{
-            color: "white",
-            fontWeight: 500,
-            display: "flex",
-            ":hover": {
-              backgroundColor: "rgba(0,0,0,0)",
-              textDecorationLine: "underline",
-            },
-          }}
-        >
-          Contact
-        </Button> */}
       </Box>
     </Box>
   );

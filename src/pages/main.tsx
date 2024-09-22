@@ -39,19 +39,6 @@ const Main = () => {
         >
           JAC, Virtual Assistants LLC
         </Typography>
-        {/* <Typography
-          variant="subtitle1"
-          component="div"
-          sx={{
-            padding: 1.5,
-            paddingTop: 0,
-            color: "white",
-            fontWeight: 400,
-            textAlign: "end",
-          }}
-        >
-          HIPAA certified and background checked virtual assistants
-        </Typography> */}
         <Typography
           variant="h6"
           component="div"
