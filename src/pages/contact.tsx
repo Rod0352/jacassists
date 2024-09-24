@@ -19,7 +19,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 const Portrait = require("../imgs/jess_main.jpeg");
 const Portrait3 = require("../imgs/sarah_main.jpeg");
 const Portrait4 = require("../imgs/josie.jpeg");
-const Portrait5 = require("../imgs/meg.jpg");
+const Portrait5 = require("../imgs/meghan.png");
 const bg = require("../imgs/contact_bg.jpeg");
 const insta_64 = require("../imgs/in_64.png");
 const insta_128 = require("../imgs/in_128.png");
