@@ -122,7 +122,6 @@ export default function SwipeableTemporaryDrawer() {
           </Button>
           <SwipeableDrawer
             sx={{
-              maxWidth: 300,
               "& .MuiDrawer-paper": {
                 overflowX: "hidden",
                 backgroundColor: "#5d5353b5",
@@ -137,6 +136,7 @@ export default function SwipeableTemporaryDrawer() {
             {list("right")}
             <Box
               sx={{
+                maxWidth: 300,
                 width: "99.8%",
                 height: "99.8%",
                 display: "flex",
