@@ -326,7 +326,7 @@ const Contact = () => {
                   fontFamily: "Lora",
                 }}
               >
-                Virtual Assistant
+                Team Manager & Virtual Assistant
               </Typography>
               <Typography
                 variant="subtitle2"

@@ -169,7 +169,6 @@ const ServiceItem = ({
         overflowY: "auto",
         "&::-webkit-scrollbar": {
           display: "none",
-          
         },
       }}
       key={index}
@@ -385,7 +384,7 @@ const Services = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Typography
+      {/* <Typography
         variant="h4"
         component="div"
         sx={{
@@ -410,7 +409,7 @@ const Services = () => {
       >
         Insurance Credentialing ( this will be a separate, project based service
         with its own separate cost! )
-      </Typography>
+      </Typography> */}
       <Typography
         variant="h5"
         component="div"
@@ -435,8 +434,8 @@ const Services = () => {
           textWrap: "balance",
         }}
       >
-        All services are billed $36 hourly at your choice of weekly, bi-weekly,
-        or monthly intervals
+        All services are billed starting at $36 per hour with your choice of
+        weekly, bi-weekly, or monthly intervals
       </Typography>
 
       <Button
